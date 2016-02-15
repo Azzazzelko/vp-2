@@ -1,9 +1,11 @@
 var gulp = require("gulp"),
 	jade = require("gulp-jade"),
 	plumber = require("gulp-plumber"),
+	compass = require('gulp-compass'),
 	browserSync = require("browser-sync");
 
-var jadePath = 'app/_myJade/*.jade';
+var jadePath = 'app/_myJade/**/*.jade';
+var SCSSPath = 'app/_mySCSS/**/*.scss';
 
 	gulp.task("server", function() {
 		browserSync({
@@ -27,7 +29,7 @@ var jadePath = 'app/_myJade/*.jade';
 	gulp.task('jade', function(){
 		var YOUR_LOCALS = {};
 
-		gulp.src('app/_myJade/*.jade')
+		gulp.src(jadePath)
 			.pipe(plumber())
 			.pipe(jade({
 				locals: YOUR_LOCALS,
@@ -36,11 +38,22 @@ var jadePath = 'app/_myJade/*.jade';
 			.pipe(gulp.dest('app/pages/'))
 	});
 
+//============== Настраиваем КОМПАС =====================
+	// gulp.task('compass', function() {
+	// 	gulp.src('app/_mySCSS/main.scss')
+	// 		.pipe(plumber())
+	// 		.pipe(compass({
+	// 			config_file: 'config.rb',
+	// 			css: 'app/css/',
+	// 			sass: 'app/_mySCSS/'
+	// 		}))
+	// });
 //============== При изменении файлов JADE запускаем таск JADE =====
-	gulp.task("jadeReSave", function(){
-		gulp.watch(jadePath, ['jade'])
+	gulp.task("watch2", function(){
+		gulp.watch(jadePath, ['jade']);
+		// gulp.watch(SCSSPath, ['compass'])
 	});
 
-	gulp.task("default", ["server", "jade", "jadeReSave", "watch"]);
+	gulp.task("default", ["server", "jade", "watch2", "watch"]);
 
 	

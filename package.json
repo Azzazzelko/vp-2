@@ -3,7 +3,9 @@
   "devDependencies": {
     "browser-sync": "^2.11.1",
     "gulp": "^3.9.0",
+    "gulp-compass": "^2.1.0",
     "gulp-jade": "^1.1.0",
-    "gulp-plumber": "^1.1.0"
+    "gulp-plumber": "^1.1.0",
+    "node-sass-globbing": "0.0.23"
   }
 }

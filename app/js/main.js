@@ -1,1 +1,4 @@
-console.log("Другой текст!");
+$(function() {
+    $( "#slider" ).slider();
+    console.log("Я работаю");
+ });

@@ -7,6 +7,7 @@
 		<title>Мобильные телефоны</title>
 		<link rel="stylesheet" href="../bower/normalize-css/normalize.css">
 		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../css/slider.css">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -54,9 +55,80 @@
 				</div>
 			</header>
 			<main class="content">
-				<div class="container">
-					<div class="breadcrumbs"></div>
-					<aside class="sidebar"></aside>
+				<div class="container clearfix">
+					<div class="breadcrumbs">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item"><a class="breadcrumbs__link">Главная &gt;</a></li>
+							<li class="breadcrumbs__item"><a class="breadcrumbs__link">Каталог</a></li>
+						</ul>
+						<div class="breadcrumbs__current">Мобильные телефоны</div>
+					</div>
+					<aside class="sidebar">
+						<ul class="expenses__list">
+							<li class="expenses__item"><a href="#" class="expenses__link">Флагманы</a></li>
+							<li class="expenses__item"><a href="#" class="expenses__link">Бюджетная линейка</a></li>
+						</ul>
+						<ul class="categories__list">
+							<li class="categories__item"><span class="categories__name">Наличие в магазинах</span>
+								<div class="categories__content">
+									<ul class="categories__content__list">
+										<li class="categories__content__item">
+											<input type="radio" name="in-stores" id="in-stores-1" checked>
+											<label for="in-stores-1" class="categories__label">Во всех магазинах</label>
+										</li>
+										<li class="categories__content__item">
+											<input type="radio" name="in-stores" id="in-stores-2">
+											<label for="in-stores-2" class="categories__label">В ближайшем ко мне магазине</label>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="categories__item"><span class="categories__name">Бренды</span>
+								<div class="categories__content">
+									<ul class="categories__content__list">
+										<li class="categories__content__item">
+											<input type="checkbox" name="brands" id="brands-1">
+											<label for="brands-1" class="categories__label">Lenovo</label>
+										</li>
+										<li class="categories__content__item">
+											<input type="checkbox" name="brands" id="brands-2">
+											<label for="brands-2" class="categories__label">Apple</label>
+										</li>
+										<li class="categories__content__item">
+											<input type="checkbox" name="brands" id="brands-3">
+											<label for="brands-3" class="categories__label">Samsung</label>
+										</li>
+										<li class="categories__content__item">
+											<input type="checkbox" name="brands" id="brands-4">
+											<label for="brands-4" class="categories__label">Asus</label>
+										</li>
+										<li class="categories__content__item">
+											<input type="checkbox" name="brands" id="brands-5">
+											<label for="brands-5" class="categories__label">Motorola</label>
+										</li>
+										<li class="categories__content__item"><a href="#">Сбросить фильтр</a></li>
+									</ul>
+								</div>
+							</li>
+							<li class="categories__item"><span class="categories__name">Цена</span>
+								<div class="categories__content">
+									<label>от
+										<input type="text" id="price-min">
+									</label>
+									<label>до 
+										<input type="text" id="price-max">
+									</label>
+									<div id="slider"></div>
+								</div>
+							</li>
+							<li class="categories__item"><span class="categories__name">Цвет</span>
+								<div class="categories__content"></div>
+							</li>
+							<li class="categories__item"><span class="categories__name">Операционные системы</span>
+								<div class="categories__content"></div>
+							</li>
+						</ul>
+					</aside>
 					<div class="content-area"></div>
 					<div class="info"></div>
 				</div>
@@ -82,5 +154,8 @@
 				</nav>
 			</div><span class="copy">All rights reserved. 2016. no copy allowed</span>
 		</footer>
+		<script src="../bower/jquery/jquery.js"></script>
+		<script src="../js/jquery-ui.js"></script>
+		<script src="../js/main.js"></script>
 	</body>
 </html>

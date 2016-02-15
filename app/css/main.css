@@ -23,7 +23,10 @@ body {
 }
 
 .wrapper:after {
-	height: 220px; 
+	content: "";
+	display: block;
+	height: 220px;
+	width: 100%;
 }
 
 .footer {
@@ -94,13 +97,14 @@ body {
 	width: 100%;
 	text-align: center;
 	border-top: 1px solid #494949;
-	margin-top: 35px;
+	margin-top: 32px;
 	padding: 10px 0;
 	font-size: 12px;
 }
 
 .header {
 	height: 227px;
+	margin-bottom: 35px;
 }
 
 .header-part-1 {
@@ -261,3 +265,137 @@ body {
 .clearfix:after {
 	 clear: both;
 	}
+
+.breadcrumbs__list {
+	margin: 0;
+	padding: 0;	
+	list-style: none;
+	margin-bottom: 25px;
+}
+
+.breadcrumbs__item {
+	display: inline-block;
+}
+
+.breadcrumbs__current {
+	margin-bottom: 35px;
+}
+
+.sidebar {
+		border: 1px solid yellow;
+	width: 335px;
+	float: left;
+}
+
+.expenses__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border-radius: 5px;
+	border: 1px solid #dee1e4;
+	overflow: hidden;
+	margin-bottom: 40px;
+}
+
+.expenses__item {
+	border-top: 1px solid #dee1e4;
+}
+
+.expenses__item:first-child {
+	border-top: none;
+}
+
+.expenses__link {
+	display: block;
+	width: 100%;
+	padding: 15px 30px;
+	background: white;
+	color: #7f7f7f;
+	text-decoration: none;
+}
+
+.expenses__link:hover {
+	background: #d9e5ea;
+	color: #5d656c;
+}
+
+.categories__list {
+	overflow: hidden;
+	border-radius: 5px;
+	border: 1px solid #dee1e4;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background-color: white;
+}
+
+.categories__name {
+	display: inline-block;
+	padding: 15px 30px;
+}
+
+.categories__content__list {
+	list-style: none;
+	margin: 0;
+	padding: 0 30px 15px 30px;
+}
+
+.categories__content__item {
+	padding: 10px 5px;
+	display: block;
+}
+
+.categories__item {
+	border-bottom: 1px solid #dee1e4;
+}
+
+.categories__item:last-child {
+	border: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	display: none;
+}
+
+input[type="radio"] + label:before {
+	content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 10px;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 3px #bdc3c7;
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked + label:before {
+	 background: #ff6600;
+	 box-shadow: 0 0 0 3px #ff6600;
+}
+
+input[type="checkbox"] + label:before {
+	content: "";
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    margin-right: 10px;
+	background: #dee1e4;
+	border-radius: 4px;
+	vertical-align: middle;
+}
+
+input[type="checkbox"]:checked + label:before {
+			background: black;
+}
+
+input[type="checkbox"] + label:hover:before {
+			background: red;
+}
+
+.categories__label {
+	cursor: pointer;
+}
+
+
+
