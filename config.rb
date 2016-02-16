@@ -5,7 +5,7 @@ require 'sass-globbing'
 
 # Set this to the root of your project when deployed:
 
-http_path = "/"
+# http_path = "/"
 css_dir = "app/css/"
 sass_dir = "app/_mySCSS/"
 images_dir = "app/images/"
@@ -20,3 +20,7 @@ relative_assets = false
 line_comments = true
 
 preferred_syntax = :scss
+
+sourcemap = true
+
+Encoding.default_external = "UTF-8"

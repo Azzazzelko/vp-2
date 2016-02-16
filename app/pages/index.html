@@ -5,9 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width">
 		<title>Мобильные телефоны</title>
-		<link rel="stylesheet" href="../bower/normalize-css/normalize.css">
 		<link rel="stylesheet" href="../css/main.css">
-		<link rel="stylesheet" href="../css/slider.css">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -106,26 +104,65 @@
 											<input type="checkbox" name="brands" id="brands-5">
 											<label for="brands-5" class="categories__label">Motorola</label>
 										</li>
-										<li class="categories__content__item"><a href="#">Сбросить фильтр</a></li>
+										<li class="categories__content__item"><a href="#" class="clear-filter">Сбросить фильтр</a></li>
 									</ul>
 								</div>
 							</li>
 							<li class="categories__item"><span class="categories__name">Цена</span>
 								<div class="categories__content">
-									<label>от
-										<input type="text" id="price-min">
+									<label class="label__price-min">от
+										<input type="text" id="price-min" class="price-min">
 									</label>
-									<label>до 
-										<input type="text" id="price-max">
+									<label class="label__price-max">до 
+										<input type="text" id="price-max" class="price-max">
 									</label>
-									<div id="slider"></div>
+									<div id="slider-range" class="slider-range slider-range"></div>
 								</div>
 							</li>
 							<li class="categories__item"><span class="categories__name">Цвет</span>
-								<div class="categories__content"></div>
+								<div class="categories__content">
+									<ul class="colors__list">
+										<li class="colors__item colors__item_white"></li>
+										<li class="colors__item colors__item_silver"></li>
+										<li class="colors__item colors__item_black"></li>
+										<li class="colors__item colors__item_darkblue"></li>
+										<li class="colors__item colors__item_red"></li>
+										<li class="colors__item colors__item_yellow"></li>
+										<li class="colors__item colors__item_orange"></li>
+										<li class="colors__item colors__item_green"></li>
+										<li class="colors__item colors__item_blue"></li>
+										<li class="colors__item colors__item_purpul"></li>
+										<li class="colors__item colors__item_rose"></li>
+										<li class="colors__item colors__item_brown"></li>
+									</ul>
+								</div>
 							</li>
 							<li class="categories__item"><span class="categories__name">Операционные системы</span>
-								<div class="categories__content"></div>
+								<div class="categories__content">
+									<ul class="categories__content__list">
+										<li class="categories__content__item">
+											<input type="checkbox" name="OS" id="OS-1">
+											<label for="OS-1" class="categories__label">Android</label>
+										</li>
+										<li class="categories__content__item">
+											<input type="checkbox" name="OS" id="OS-2">
+											<label for="OS-2" class="categories__label">iOS</label>
+										</li>
+										<li class="categories__content__item">
+											<input type="checkbox" name="OS" id="OS-3">
+											<label for="OS-3" class="categories__label">Windows Mobile</label>
+										</li>
+										<li class="categories__content__item">
+											<input type="checkbox" name="OS" id="OS-4">
+											<label for="OS-4" class="categories__label">Symbian</label>
+										</li>
+										<li class="categories__content__item">
+											<input type="checkbox" name="OS" id="OS-5">
+											<label for="OS-5" class="categories__label">Custom</label>
+										</li>
+										<li class="categories__content__item"><a href="#" class="clear-filter">Сбросить фильтр</a></li>
+									</ul>
+								</div>
 							</li>
 						</ul>
 					</aside>

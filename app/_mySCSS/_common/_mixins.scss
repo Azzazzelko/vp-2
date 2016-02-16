@@ -1,0 +1,25 @@
+$map: sprite-map('icons/*.png', $spacing: 70px);
+
+@mixin get-sprite($map, $icon) {
+	$sprite-image: sprite-file($map, $icon);
+	$sprite-url: sprite-url($map);
+	$sprite-position: sprite-position($map, $icon);
+
+	background: $sprite-url $sprite-position no-repeat;
+
+	$sprite-height: image-height($sprite-image);
+	$sprite-width: image-width($sprite-image);
+
+	width: $sprite-width;
+	height: $sprite-height;
+}
+
+/* --------- TESTS --------- */
+// $socials: vk, fb, tw;
+
+// @each $icon in $socials {
+// 	.socials__link_#{$icon} {
+// 		@include get-sprite($map, $icon);
+// 	}
+// }
+// /* --------- TESTS --------- */

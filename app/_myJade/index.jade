@@ -5,9 +5,7 @@ html(lang='ru-Ru')
 		meta(http-equiv='X-UA-Compatible', content="IE=edge,chrome=1")
 		meta(name='viewport' content='width=device-width')
 		title Мобильные телефоны
-		link(rel="stylesheet", href="../bower/normalize-css/normalize.css")
 		link(rel="stylesheet", href="../css/main.css")
-		link(rel="stylesheet", href="../css/slider.css")
 	body
 		.wrapper
 			header.header
@@ -104,22 +102,53 @@ html(lang='ru-Ru')
 											input(type="checkbox", name="brands", id="brands-5")
 											label(for="brands-5").categories__label Motorola
 										li.categories__content__item
-											a(href="#") Сбросить фильтр
+											a(href="#").clear-filter Сбросить фильтр
 
 							li.categories__item
 								span.categories__name Цена
 								div.categories__content
-									label от
-										input(type="text", id="price-min")
-									label до 
-										input(type="text", id="price-max")
-									div(id="slider")
+									label.label__price-min от
+										input(type="text", id="price-min" class="price-min")
+									label.label__price-max до 
+										input(type="text", id="price-max" class="price-max")
+									div(id="slider-range", class="slider-range").slider-range
 							li.categories__item
 								span.categories__name Цвет
 								div.categories__content
+									ul.colors__list
+										li.colors__item.colors__item_white
+										li.colors__item.colors__item_silver
+										li.colors__item.colors__item_black
+										li.colors__item.colors__item_darkblue
+										li.colors__item.colors__item_red
+										li.colors__item.colors__item_yellow
+										li.colors__item.colors__item_orange
+										li.colors__item.colors__item_green
+										li.colors__item.colors__item_blue
+										li.colors__item.colors__item_purpul
+										li.colors__item.colors__item_rose
+										li.colors__item.colors__item_brown
 							li.categories__item
 								span.categories__name Операционные системы
 								div.categories__content
+									ul.categories__content__list
+										li.categories__content__item
+											input(type="checkbox", name="OS", id="OS-1")
+											label(for="OS-1").categories__label Android
+										li.categories__content__item
+											input(type="checkbox", name="OS", id="OS-2")
+											label(for="OS-2").categories__label iOS
+										li.categories__content__item
+											input(type="checkbox", name="OS", id="OS-3")
+											label(for="OS-3").categories__label Windows Mobile
+										li.categories__content__item
+											input(type="checkbox", name="OS", id="OS-4")
+											label(for="OS-4").categories__label Symbian
+										li.categories__content__item
+											input(type="checkbox", name="OS", id="OS-5")
+											label(for="OS-5").categories__label Custom
+										li.categories__content__item
+											a(href="#").clear-filter Сбросить фильтр
 
 					.content-area
 

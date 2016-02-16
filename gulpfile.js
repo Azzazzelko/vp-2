@@ -39,21 +39,22 @@ var SCSSPath = 'app/_mySCSS/**/*.scss';
 	});
 
 //============== Настраиваем КОМПАС =====================
-	// gulp.task('compass', function() {
-	// 	gulp.src('app/_mySCSS/main.scss')
-	// 		.pipe(plumber())
-	// 		.pipe(compass({
-	// 			config_file: 'config.rb',
-	// 			css: 'app/css/',
-	// 			sass: 'app/_mySCSS/'
-	// 		}))
-	// });
+	gulp.task('compass', function() {
+		gulp.src('app/_mySCSS/main.scss')
+			.pipe(plumber())
+			.pipe(compass({
+				sourcemap: true,
+				config_file: 'config.rb',
+				css: 'app/css/',
+				sass: 'app/_mySCSS/'
+			}))
+	});
 //============== При изменении файлов JADE запускаем таск JADE =====
 	gulp.task("watch2", function(){
 		gulp.watch(jadePath, ['jade']);
-		// gulp.watch(SCSSPath, ['compass'])
+		gulp.watch('app/_mySCSS/main.scss', ['compass'])
 	});
 
-	gulp.task("default", ["server", "jade", "watch2", "watch"]);
+	gulp.task("default", ["server", "jade", "compass", "watch2", "watch"]);
 
 	
