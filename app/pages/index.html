@@ -13,12 +13,14 @@
 				<div class="header-part-1">
 					<div class="container clearfix">
 						<ul class="header-social-list">
-							<li class="head-social__item"><a class="head-social__link head-social__link_fb text-hide">fb</a></li>
-							<li class="head-social__item"><a class="head-social__link head-social__link_vk text-hide">vk</a></li>
-							<li class="head-social__item"><a class="head-social__link head-social__link_tw text-hide">tw</a></li>
+							<li class="head-social__item"><a class="head-social__link head-social__link_fb"><span class="text-hide">fb</span></a></li>
+							<li class="head-social__item"><a class="head-social__link head-social__link_vk"><span class="text-hide">vk</span></a></li>
+							<li class="head-social__item"><a class="head-social__link head-social__link_tw"><span class="text-hide">tw</span></a></li>
 						</ul>
-						<div class="telephone">"I" +7 (921) 123-12-13</div>
-						<div class="adress">"I" ул. Маяковская 6, офис 17</div>
+						<ul class="location">
+							<li class="location__adress">ул. Маяковская 6, офис 17</li>
+							<li class="location__telephone">+7 (921) 123-12-13</li>
+						</ul>
 					</div>
 				</div>
 				<div class="header-part-2">
@@ -166,17 +168,79 @@
 							</li>
 						</ul>
 					</aside>
-					<div class="content-area"></div>
-					<div class="info"></div>
+					<div class="content-area">
+						<div class="control clearfix">
+							<div class="control__sort">Сортировать по
+								<select class="control__select">
+									<option>Цене</option>
+								</select>
+							</div>
+							<ul class="control__view-list">
+								<li class="control__view-item"> <span class="control__view-item-text">Вид каталога</span></li>
+								<li class="control__view-item control__view-item_inline-block"></li>
+								<li class="control__view-item control__view-item_block"></li>
+								<li class="control__view-item control__view-item_inline"></li>
+							</ul>
+						</div>
+						<ul class="product__list">
+							<li class="product__item">
+								<div class="product__box-1">
+									<div class="product__full-size-img"><img src="" alt="" class="product__img-img"></div>
+									<ul class="product__img-list">
+										<li class="product__img-item"><img src="" alt="" class="product__img-img"></li>
+										<li class="product__img-item"><img src="" alt="" class="product__img-img"></li>
+										<li class="product__img-item"><img src="" alt="" class="product__img-img"></li>
+									</ul>
+									<div class="product__article">Артикул <span class="product__article_number">189238</span></div>
+								</div>
+								<div class="product__box-2">
+									<h3 class="product__title">Samsung GT-I9301I GALAXY S 3</h3>
+									<div class="product__info">Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота OVER9k процессора 1400 МГц EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц</div>
+									<ul class="product__rate-list">
+										<li class="product__rate-item"></li>
+										<li class="product__rate-item"></li>
+										<li class="product__rate-item"></li>
+										<li class="product__rate-item"></li>
+										<li class="product__rate-item"></li>
+										<li class="product__rate-item_star-col">4</li>
+									</ul>
+								</div>
+								<div class="product__box-3">
+									<div class="product__price">10 990 Р</div>
+									<div class="product__fake-div"></div>
+									<div class="product__availability">В наличии</div>
+									<button class="product__add-to-cart">В корзину</button>
+								</div>
+							</li>
+						</ul>
+						<ul class="page-number__list">
+							<li class="page-number__item"> <a href="#" class="page-number__link">&#60;</a></li>
+							<li class="page-number__item"><a href="#" class="page-number__link">1</a></li>
+							<li class="page-number__item"><a href="#" class="page-number__link">2</a></li>
+							<li class="page-number__item"><a href="#" class="page-number__link">3</a></li>
+							<li class="page-number__item"><a href="#" class="page-number__link">&#62;</a></li>
+						</ul>
+					</div>
+					<div class="info-block">
+						<h4 class="info-block__title">Важная информация</h4>
+						<div class="info-block__text">
+							<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde placeat repellendus quisquam error eligendi aperiam a, laboriosam ex, consectetur aliquid. Eius reiciendis, sit iusto non error enim vero, corrupti ullam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum saepe, suscipit repellendus optio quasi a facere obcaecati ipsa voluptatum nisi inventore eaque cumque nostrum provident rem. Sapiente quis, eveniet similique?  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis odio, iste sunt recusandae provident consequatur eum in, deserunt dignissimos architecto rem, maxime officia reprehenderit. Tempore tenetur nisi, fuga quisquam repellat.</p>
+							<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde placeat repellendus quisquam error eligendi aperiam a, laboriosam ex, consectetur aliquid. Eius reiciendis, sit iusto non error enim vero, corrupti ullam.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et ducimus praesentium nam deleniti totam alias provident, accusamus eaque doloribus, quaerat sint rem. Recusandae mollitia, quis, nulla dignissimos nostrum illum suscipit.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor consequuntur unde, quam aliquam deleniti, aut eius nostrum, laborum deserunt magni minus. Veniam voluptate odit quos alias odio sed provident nesciunt.</p>
+							<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde placeat repellendus quisquam error eligendi aperiam a, laboriosam ex, consectetur aliquid. Eius reiciendis, sit iusto non error enim vero, corrupti ullam.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam rerum, debitis, perspiciatis facere culpa, iusto iure at quos voluptates delectus neque asperiores possimus ad, suscipit nesciunt. Dolor fuga, sint mollitia.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae id aliquam, iure, dolorem voluptates exercitationem deserunt temporibus, minus maxime ipsam assumenda, numquam praesentium vero corrupti incidunt placeat! Dolore, error, ea.</p>
+							<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde placeat repellendus quisquam error eligendi aperiam a, laboriosam ex, consectetur aliquid. Eius reiciendis, sit iusto non error enim vero, corrupti ullam.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error ut officia tempora similique ipsum officiis delectus itaque repudiandae ab odio in eligendi eos necessitatibus quidem, magni ullam eveniet debitis earum.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque corrupti, illo quibusdam laudantium non exercitationem. Hic, ullam rem placeat reprehenderit laborum quis incidunt ipsa nostrum aspernatur deserunt non. Molestias, quisquam.</p>
+							<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde placeat repellendus quisquam error eligendi aperiam a, laboriosam ex, consectetur aliquid. Eius reiciendis, sit iusto non error enim vero, corrupti ullam.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi repellat repellendus beatae dolore at veritatis dolorem quasi, ipsam quidem et delectus adipisci aut sit, quod? Voluptatibus fuga ratione praesentium molestias?  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic sunt, soluta itaque officiis! Architecto rem laborum, dolorem accusantium id reprehenderit, voluptas enim facilis, sunt dicta inventore odio! Accusantium, iusto nobis.</p>
+							<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde placeat repellendus quisquam error eligendi aperiam a, laboriosam ex, consectetur aliquid. Eius reiciendis, sit iusto non error enim vero, corrupti ullam.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam ab vero, labore odio ad, ducimus eius amet rerum officiis illum praesentium iusto. Doloremque, voluptate porro temporibus vitae aliquam sequi nulla.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam saepe unde provident non veritatis consectetur temporibus voluptatibus.</p>
+						</div>
+					</div>
 				</div>
 			</main>
 		</div>
 		<footer class="footer">
 			<div class="container clearfix">
 				<ul class="footer-social-list">
-					<li class="foot-social__item"><a class="foot-social__link foot-social__link_fb text-hide">fb</a></li>
-					<li class="foot-social__item"><a class="foot-social__link foot-social__link_vk text-hide">vk</a></li>
-					<li class="foot-social__item"><a class="foot-social__link foot-social__link_tw text-hide">tw</a></li>
+					<li class="foot-social__item"><a class="foot-social__link foot-social__link_fb"><span class="text-hide">fb</span></a></li>
+					<li class="foot-social__item"><a class="foot-social__link foot-social__link_vk"><span class="text-hide">vk</span></a></li>
+					<li class="foot-social__item"><a class="foot-social__link foot-social__link_tw"><span class="text-hide">tw</span></a></li>
 				</ul><a class="logo-footer"><img src="../images/logo-footer.png" alt="logo" class="logo__img"><span class="text-hide">COOLTECH</span></a>
 				<nav class="foot-nav">
 					<ul class="foot-nav__list">
@@ -193,6 +257,7 @@
 		</footer>
 		<script src="../bower/jquery/jquery.js"></script>
 		<script src="../js/jquery-ui.js"></script>
+		<script src="../js/jquery.columnizer.js"></script>
 		<script src="../js/main.js"></script>
 	</body>
 </html>

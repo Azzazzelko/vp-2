@@ -1,5 +1,11 @@
-$map: sprite-map('icons/*.png', $spacing: 70px);
+%myBorder {
+	border: 1px solid red;
+}
 
+$map: sprite-map('icons/*.png', $spacing: 70px);
+$map-hover: sprite-map('icons/hover/*.png', $spacing: 70px);
+$socials: fb, vk, tw;
+ 
 @mixin get-sprite($map, $icon) {
 	$sprite-image: sprite-file($map, $icon);
 	$sprite-url: sprite-url($map);
@@ -12,9 +18,23 @@ $map: sprite-map('icons/*.png', $spacing: 70px);
 
 	width: $sprite-width;
 	height: $sprite-height;
-}
+}  
+  
+@mixin get-sprite_x_y($map, $icon, $offset-x, $offset-y) {
+	$sprite-image: sprite-file($map, $icon);
+	$sprite-url: sprite-url($map);
+	$sprite-position: sprite-position($map, $icon, $offset-x, $offset-y);
 
-/* --------- TESTS --------- */
+	background: $sprite-url $sprite-position no-repeat;
+
+	$sprite-height: image-height($sprite-image);
+	$sprite-width: image-width($sprite-image);
+
+	// width: $sprite-width;
+	// height: $sprite-height;
+}
+ 
+//--------- TESTS --------- */
 // $socials: vk, fb, tw;
 
 // @each $icon in $socials {
@@ -22,4 +42,4 @@ $map: sprite-map('icons/*.png', $spacing: 70px);
 // 		@include get-sprite($map, $icon);
 // 	}
 // }
-// /* --------- TESTS --------- */
+//--------- TESTS --------- */ 

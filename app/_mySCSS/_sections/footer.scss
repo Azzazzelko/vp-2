@@ -21,8 +21,40 @@
 	width: 43px;
 	border-radius: 50%;
 	margin-left: 16px;
-		background-color: black;
+	background-color: white;
 	display: inline-block;
+}
+
+.foot-social__link {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+@each $item in $socials {
+	.foot-social__link_#{$item} {
+		$foo-item: #{$item}-foo;
+		@if $item == tw {
+			@include get-sprite_x_y($map, $foo-item, 5+4, 7+3);
+		} @else if $item == vk {
+			@include get-sprite_x_y($map, $foo-item, 9+5, 7+3);
+		} @else if $item == fb {
+			@include get-sprite_x_y($map, $foo-item, 10+6, 6+5);
+		}
+	}
+}
+
+@each $item in $socials {
+	.foot-social__link_#{$item}:hover {
+		$foo-item-hover: #{$item}-foo-hover;
+		@if $item == tw {
+			@include get-sprite_x_y($map-hover, $foo-item-hover, 5+4, 7+3);
+		} @else if $item == vk {
+			@include get-sprite_x_y($map-hover, $foo-item-hover, 9+5, 7+3);
+		} @else if $item == fb {
+			@include get-sprite_x_y($map-hover, $foo-item-hover, 10+6, 6+5);
+		}
+	}
 }
 
 .foot-social__item:first-child {

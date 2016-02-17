@@ -32,13 +32,56 @@
 	margin-left: 0;
 }
 
-.adress, 
-.telephone {
+@each $item in $socials {
+	.head-social__link_#{$item} {
+		@if $item == tw {
+			@include get-sprite_x_y($map, $item, 5, 7);
+		} @else if $item == vk {
+			@include get-sprite_x_y($map, $item, 9, 7);
+		} @else if $item == fb {
+			@include get-sprite_x_y($map, $item, 10, 6);
+		}
+	}
+}
+
+@each $item in $socials {
+	.head-social__link_#{$item}:hover {
+		@if $item == tw {
+			@include get-sprite_x_y($map-hover, #{$item}-hover, 5, 7);
+		} @else if $item == vk {
+			@include get-sprite_x_y($map-hover, #{$item}-hover, 9, 7);
+		} @else if $item == fb {
+			@include get-sprite_x_y($map-hover, #{$item}-hover, 10, 6);
+		}
+	}
+}
+
+.head-social__link {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.location {
 	float: right;
+}
+
+.location__adress, 
+.location__telephone {
+	padding-left: 20px;
 	display: inline-block;
 	line-height: 79px;
 	vertical-align: middle;
 	margin-left: 85px;
+}
+
+.location__adress {
+	margin-left: 0;
+	@include get-sprite_x_y($map, map-pin, 0, 31);
+}
+
+.location__telephone {
+	@include get-sprite_x_y($map, telephone, 0, 31);
 }
 
 .header-part-2 {
