@@ -87,6 +87,10 @@
 	color: white;
 	font-size: 14px;
 	text-decoration: underline;
+
+	&:hover {
+		text-decoration: none;
+	}
 }
 
 

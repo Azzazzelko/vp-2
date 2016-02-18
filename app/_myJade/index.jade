@@ -13,60 +13,61 @@ html(lang='ru-Ru')
 					.container.clearfix
 						ul.header-social-list
 							li.head-social__item
-								a.head-social__link.head-social__link_fb
+								a(href="#").head-social__link.head-social__link_fb
 									span.text-hide fb
 							li.head-social__item
-								a.head-social__link.head-social__link_vk
+								a(href="#").head-social__link.head-social__link_vk
 									span.text-hide vk
 							li.head-social__item
-								a.head-social__link.head-social__link_tw
+								a(href="#").head-social__link.head-social__link_tw
 									span.text-hide tw
 						ul.location
 							li.location__adress ул. Маяковская 6, офис 17
 							li.location__telephone +7 (921) 123-12-13
 				.header-part-2
 					.container.clearfix
-						a.logo
+						a(href="#").logo
 							img(src="../images/logo.png", alt="logo").logo__img
 							h1.text-hide COOLTECH
 						.search-block
 							input(type="search", placeholder="Что будем искать?").search-block__input
+							button(type="submit").search-block__button Найти
 						.help-menu
 							ul.help-menu__list
 								li.help-menu__item
-									a.help-menu__link Карта проезда
+									a(href="#").help-menu__link Карта проезда
 								li.help-menu__item
-									a.help-menu__link История заказов 
+									a(href="#").help-menu__link История заказов 
 								li.help-menu__item
-									a.help-menu__link Корзина 		
+									a(href="#").help-menu__link Корзина 		
 				.header-part-3
 					.container
 						nav.nav
 							ul.nav__list
 								li.nav__item
-									a.nav__link Планшеты
+									a(href="#").nav__link Планшеты
 								li.nav__item
-									a.nav__link Мобильный телефоны
+									a(href="#").nav__link.nav__link_active Мобильные телефоны
 								li.nav__item
-									a.nav__link Мp3 плееры
+									a(href="#").nav__link Мp3 плееры
 								li.nav__item
-									a.nav__link Персональные компьютеры
+									a(href="#").nav__link Персональные компьютеры
 								li.nav__item
-									a.nav__link Ноутбуки
+									a(href="#").nav__link Ноутбуки
 								li.nav__item
-									a.nav__link Аксессуары
+									a(href="#").nav__link Аксессуары
 								li.nav__item
-									a.nav__link Бытовая техника
+									a(href="#").nav__link Бытовая техника
 
 			main.content
 				.container.clearfix
 					.breadcrumbs
 						ul.breadcrumbs__list
 							li.breadcrumbs__item
-								a.breadcrumbs__link Главная &gt;
+								a(href="#").breadcrumbs__link Главная &gt;
 							li.breadcrumbs__item
-								a.breadcrumbs__link Каталог
-						.breadcrumbs__current Мобильные телефоны
+								a(href="#").breadcrumbs__link Каталог
+							li.breadcrumbs__current Мобильные телефоны
 
 					aside.sidebar
 						ul.expenses__list
@@ -169,14 +170,14 @@ html(lang='ru-Ru')
 							li.product__item
 								.product__box-1
 									.product__full-size-img
-										img(src="", alt="").product__img-img
+										img(src="../images/img-2.png", alt="").product__img-hight
 									ul.product__img-list
+										li.product__img-item.product__img-item_active
+											img(src="../images/img-2.png", alt="").product__img-small
 										li.product__img-item
-											img(src="", alt="").product__img-img
+											img(src="../images/img-3.png", alt="").product__img-small
 										li.product__img-item
-											img(src="", alt="").product__img-img
-										li.product__img-item
-											img(src="", alt="").product__img-img
+											img(src="../images/img-4.png", alt="").product__img-small
 									.product__article Артикул 
 										span.product__article_number 189238
 
@@ -184,6 +185,29 @@ html(lang='ru-Ru')
 									h3.product__title Samsung GT-I9301I GALAXY S 3
 									.product__info.
 										Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота OVER9k процессора 1400 МГц EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц
+									ul.product__features-list
+										li.product__features-item
+											.product__features-cell Тип SIM-карты
+											.product__features-cell Micro-SIM
+										li.product__features-item
+											.product__features-cell Количество SIM-карт
+											.product__features-cell 1
+										li.product__features-item
+											.product__features-cell Цвет
+											.product__features-cell Белый
+										li.product__features-item
+											.product__features-cell ОС
+											.product__features-cell Android
+										li.product__features-item
+											.product__features-cell Связь 3G
+											.product__features-cell Есть
+										li.product__features-item
+											.product__features-cell 4G (LTE)
+											.product__features-cell Нет
+										li.product__features-item
+											.product__features-cell GPS-модуль
+											.product__features-cell Есть
+
 									ul.product__rate-list
 										li.product__rate-item
 										li.product__rate-item
@@ -194,14 +218,170 @@ html(lang='ru-Ru')
 
 								.product__box-3
 									.product__price 10 990 Р
-									.product__fake-div
+									.product__availability В наличии
+									button.product__add-to-cart В корзину
+							li.product__item
+								.product__box-1
+									.product__full-size-img
+										img(src="../images/img-2.png", alt="").product__img-hight
+									ul.product__img-list
+										li.product__img-item.product__img-item_active
+											img(src="../images/img-2.png", alt="").product__img-small
+										li.product__img-item
+											img(src="../images/img-3.png", alt="").product__img-small
+										li.product__img-item
+											img(src="../images/img-4.png", alt="").product__img-small
+									.product__article Артикул 
+										span.product__article_number 189238
+
+								.product__box-2
+									h3.product__title Samsung GT-I9301I GALAXY S 3
+									.product__info.
+										Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота OVER9k процессора 1400 МГц EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц
+									ul.product__features-list
+										li.product__features-item
+											.product__features-cell Тип SIM-карты
+											.product__features-cell Micro-SIM
+										li.product__features-item
+											.product__features-cell Количество SIM-карт
+											.product__features-cell 1
+										li.product__features-item
+											.product__features-cell Цвет
+											.product__features-cell Белый
+										li.product__features-item
+											.product__features-cell ОС
+											.product__features-cell Android
+										li.product__features-item
+											.product__features-cell Связь 3G
+											.product__features-cell Есть
+										li.product__features-item
+											.product__features-cell 4G (LTE)
+											.product__features-cell Нет
+										li.product__features-item
+											.product__features-cell GPS-модуль
+											.product__features-cell Есть
+
+									ul.product__rate-list
+										li.product__rate-item
+										li.product__rate-item
+										li.product__rate-item
+										li.product__rate-item
+										li.product__rate-item
+										li.product__rate-item_star-col 4
+
+								.product__box-3
+									.product__price 10 990 Р
+									.product__availability В наличии
+									button.product__add-to-cart В корзину
+							li.product__item
+								.product__box-1
+									.product__full-size-img
+										img(src="../images/img-2.png", alt="").product__img-hight
+									ul.product__img-list
+										li.product__img-item.product__img-item_active
+											img(src="../images/img-2.png", alt="").product__img-small
+										li.product__img-item
+											img(src="../images/img-3.png", alt="").product__img-small
+										li.product__img-item
+											img(src="../images/img-4.png", alt="").product__img-small
+									.product__article Артикул 
+										span.product__article_number 189238
+
+								.product__box-2
+									h3.product__title Samsung GT-I9301I GALAXY S 3
+									.product__info.
+										Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота OVER9k процессора 1400 МГц EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц
+									ul.product__features-list
+										li.product__features-item
+											.product__features-cell Тип SIM-карты
+											.product__features-cell Micro-SIM
+										li.product__features-item
+											.product__features-cell Количество SIM-карт
+											.product__features-cell 1
+										li.product__features-item
+											.product__features-cell Цвет
+											.product__features-cell Белый
+										li.product__features-item
+											.product__features-cell ОС
+											.product__features-cell Android
+										li.product__features-item
+											.product__features-cell Связь 3G
+											.product__features-cell Есть
+										li.product__features-item
+											.product__features-cell 4G (LTE)
+											.product__features-cell Нет
+										li.product__features-item
+											.product__features-cell GPS-модуль
+											.product__features-cell Есть
+									ul.product__rate-list
+										li.product__rate-item
+										li.product__rate-item
+										li.product__rate-item
+										li.product__rate-item
+										li.product__rate-item
+										li.product__rate-item_star-col 4
+
+								.product__box-3
+									.product__price 10 990 Р
+									.product__availability В наличии
+									button.product__add-to-cart В корзину
+							li.product__item
+								.product__box-1
+									.product__full-size-img
+										img(src="../images/img-2.png", alt="").product__img-hight
+									ul.product__img-list
+										li.product__img-item.product__img-item_active
+											img(src="../images/img-2.png", alt="").product__img-small
+										li.product__img-item
+											img(src="../images/img-3.png", alt="").product__img-small
+										li.product__img-item
+											img(src="../images/img-4.png", alt="").product__img-small
+									.product__article Артикул 
+										span.product__article_number 189238
+
+								.product__box-2
+									h3.product__title Samsung GT-I9301I GALAXY S 3
+									.product__info.
+										Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота OVER9k процессора 1400 МГц EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц
+									ul.product__features-list
+										li.product__features-item
+											.product__features-cell Тип SIM-карты
+											.product__features-cell Micro-SIM
+										li.product__features-item
+											.product__features-cell Количество SIM-карт
+											.product__features-cell 1
+										li.product__features-item
+											.product__features-cell Цвет
+											.product__features-cell Белый
+										li.product__features-item
+											.product__features-cell ОС
+											.product__features-cell Android
+										li.product__features-item
+											.product__features-cell Связь 3G
+											.product__features-cell Есть
+										li.product__features-item
+											.product__features-cell 4G (LTE)
+											.product__features-cell Нет
+										li.product__features-item
+											.product__features-cell GPS-модуль
+											.product__features-cell Есть
+									ul.product__rate-list
+										li.product__rate-item
+										li.product__rate-item
+										li.product__rate-item
+										li.product__rate-item
+										li.product__rate-item
+										li.product__rate-item_star-col 4
+
+								.product__box-3
+									.product__price 10 990 Р
 									.product__availability В наличии
 									button.product__add-to-cart В корзину
 
 						ul.page-number__list
 							li.page-number__item 
 								a(href="#").page-number__link &#60;
-							li.page-number__item
+							li.page-number__item.page-number__item_active
 								a(href="#").page-number__link 1
 							li.page-number__item
 								a(href="#").page-number__link 2
@@ -223,37 +403,41 @@ html(lang='ru-Ru')
 			.container.clearfix
 				ul.footer-social-list
 					li.foot-social__item
-						a.foot-social__link.foot-social__link_fb
+						a(href="#").foot-social__link.foot-social__link_fb
 							span.text-hide fb
 					li.foot-social__item
-						a.foot-social__link.foot-social__link_vk
+						a(href="#").foot-social__link.foot-social__link_vk
 							span.text-hide vk
 					li.foot-social__item
-						a.foot-social__link.foot-social__link_tw
+						a(href="#").foot-social__link.foot-social__link_tw
 							span.text-hide tw
-				a.logo-footer
+				a(href="#").logo-footer
 					img(src="../images/logo-footer.png", alt="logo").logo__img
 					span.text-hide COOLTECH
 				nav.foot-nav
 					ul.foot-nav__list
 						li.foot-nav__item
-							a.foot-nav__link Планшеты
+							a(href="#").foot-nav__link Планшеты
 						li.foot-nav__item
-							a.foot-nav__link Мобильный телефоны
+							a(href="#").foot-nav__link Мобильный телефоны
 						li.foot-nav__item
-							a.foot-nav__link Мp3 плееры
+							a(href="#").foot-nav__link Мp3 плееры
 						li.foot-nav__item
-							a.foot-nav__link Персональные компьютеры
+							a(href="#").foot-nav__link Персональные компьютеры
 						li.foot-nav__item
-							a.foot-nav__link Ноутбуки
+							a(href="#").foot-nav__link Ноутбуки
 						li.foot-nav__item
-							a.foot-nav__link Аксессуары
+							a(href="#").foot-nav__link Аксессуары
 						li.foot-nav__item
-							a.foot-nav__link Бытовая техника
+							a(href="#").foot-nav__link Бытовая техника
 			span.copy All rights reserved. 2016. no copy allowed
 		script(src="../bower/jquery/jquery.js")
 		script(src="../js/jquery-ui.js")
 		script(src="../js/jquery.columnizer.js")
+
+		//test dot-dot-dot for ... 
+		script(src="//pastebin.com/raw.php?i=4hAcxkH4")
+
 		script(src="../js/main.js")
 		
 

@@ -1,5 +1,5 @@
 @import "compass";
-                     
+                      
 /* ======= mixins ========= */
      
 @import "_common/_mixins.scss";
@@ -15,5 +15,8 @@
 /* ======= sections ====== */ 
 
 @import "_sections/**/*";
-   
+
+/* ======= Blocks Views ========= */
   
+// @import "_layout/_view__inline-block.scss";
+// @import "_layout/_view__inline.scss";

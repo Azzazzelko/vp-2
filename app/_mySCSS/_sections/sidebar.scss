@@ -158,6 +158,7 @@ input[type="checkbox"]:not(:checked) + label:hover:before {
 }
 
 .ui-slider-handle {
+	cursor: pointer !important;
 	display: block;
 	background: transparent !important;
 	border: none !important;

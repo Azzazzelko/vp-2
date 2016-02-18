@@ -52,7 +52,7 @@ var SCSSPath = 'app/_mySCSS/**/*.scss';
 //============== При изменении файлов JADE запускаем таск JADE =====
 	gulp.task("watch2", function(){
 		gulp.watch(jadePath, ['jade']);
-		gulp.watch('app/_mySCSS/main.scss', ['compass'])
+		gulp.watch('app/_mySCSS/**/*.scss', ['compass'])
 	});
 
 	gulp.task("default", ["server", "jade", "compass", "watch2", "watch"]);

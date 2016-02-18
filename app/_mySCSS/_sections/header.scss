@@ -107,6 +107,7 @@
 }
 
 .search-block__input {
+	outline: none;
 	vertical-align: middle;
 	padding: 0 10px;
 	width: 290px;
@@ -115,19 +116,26 @@
 	border-radius: 5px;
 }
 
-.search-block:after {
+.search-block__button {
 	position: absolute;
 	content: "Найти";
 	background-color: #ff6e35;
 	height: 36px;
-	width: 46px;
+	width: 75px;
 	top: 30px;
 	right: -70px;
+	border: none;
+	outline: none;
 	border-radius: 0 5px 5px 0;
 	padding: 0 15px;
 	line-height: 35px;
 	color: white;
+
+	&:hover {
+		background-color: darken(#ff6e35, 15%);
+	}
 }
+
 
 .help-menu {
 	float: right;
@@ -151,7 +159,12 @@
 }
 
 .help-menu__link {
+	color: #333333;
 	text-decoration: underline;
+
+	&:hover {
+		color: #ff6600;
+	}
 }
 
 .header-part-3 {
@@ -179,13 +192,22 @@
 }
 
 .nav__link {
+	color: #333333;
 	padding: 0 15px;
 	display: block;
 	height: 100%;
 	line-height: 54px;
 	vertical-align: middle;
+	text-decoration: none;
 }
 
 .nav__link:hover {
 	background-color: #e4e2e2;
+}
+
+.nav__link_active,
+.nav__link_active:hover {
+	color: white;
+	cursor: default;
+	background-color: #ff6c2a;
 }
