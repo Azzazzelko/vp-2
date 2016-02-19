@@ -21,6 +21,7 @@
 }
 
 .breadcrumbs__current {
+	font-family: $bold;
 	margin-bottom: 35px;
 	margin-top: 25px;
 	font-size: 20px;
@@ -33,6 +34,7 @@
 }
 
 .control {
+	font-size: 14px;
 	width: 100%;
 	height: 50px;
 	background-color: #e4ebee;
@@ -122,7 +124,7 @@
 
 .product__box-2 {
 	max-width: 418px;
-	height: 203px;
+	height: 220px;
 	vertical-align: top;
 	border-right: 1px solid #dee1e4;
 }
@@ -163,7 +165,7 @@
 	position: relative;
 	vertical-align: top;
 	text-align: right;
-	height: 203px;
+	height: 220px;
 	padding-right: 5px;
 	float: right;
 }
@@ -204,12 +206,14 @@
 }
 
 .product__article {
+	font-family: $bold;
 	text-align: center;
 	font-size: 12px;
 	color: #7f7f7f;
 }
 
 .product__article_number {
+	font-family: $semibold;
 	font-size: 14px;
 	color: #333333;
 }
@@ -223,14 +227,15 @@
 	color: #010101; 
 	overflow: hidden;
 	text-overflow: ellipsis;
-	padding: 10px 15px;
+	padding: 5px 15px;
+	font-family: $semibold;
 }
 
 .product__info {
-	margin: 15px 0 20px 0;
+	margin: 10px 0 20px 0;
 	font-size: 14px;
 	color: #333333;
-	height: 65px;
+	height: 75px;
 	padding-right: 20px;
 	padding-left: 15px;
 	overflow: hidden;
@@ -260,7 +265,8 @@
 }
 
 .product__price {
-	padding: 5px 0;
+	font-family: $semibold;
+	padding: 0;
 	display: inline-block;
 	font-size: 20px;
 	color: black;
@@ -272,6 +278,7 @@
 	right: 0;
 	display: inline-block;
 	color: #7f7f7f;
+	font-family: $bold;
 	font-size: 12px;
 	padding: 10px 0 10px 15px;
 }
@@ -294,6 +301,8 @@
 .product__add-to-cart {
 	bottom: 0;
     right: 0;
+    font-size: 14px;
+    font-family: $bold;
     position: absolute;
 	display: inline-block;
 	border-radius: 5px;
@@ -314,6 +323,7 @@
 }
 
 .product__rate-item {
+	vertical-align: top;
 	display: inline-block;
 	@include get-sprite($map, star);
 	cursor: pointer;
@@ -332,13 +342,15 @@
 	color: white;
 	background-color: #b5beca;
 	font-size: 12px;
-	text-align: center;
+	line-height: 15px;
 	margin-top: 1px;
-    padding: 1px;
+	font-family: $semibold;
+	text-align: center;
     vertical-align: top;
 } 
 
 .page-number__list {
+	font-family: $semibold;
 	float: right;
 }
 
@@ -377,6 +389,7 @@
 }
 
 .info-block__title {
+	font-family: $bold;
 	text-indent: 0;
 	display: block;
 	clear: both;

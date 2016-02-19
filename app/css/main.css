@@ -399,6 +399,34 @@ th {
   padding: 0;
 }
 
+@font-face {
+  font-family: 'open_sansbold';
+  src: url("../fonts/opensans-bold-webfont.eot");
+  src: url("../fonts/opensans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-bold-webfont.woff2") format("woff2"), url("../fonts/opensans-bold-webfont.woff") format("woff"), url("../fonts/opensans-bold-webfont.ttf") format("truetype"), url("../fonts/opensans-bold-webfont.svg#open_sansbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'open_sanslight';
+  src: url("../fonts/opensans-light-webfont.eot");
+  src: url("../fonts/opensans-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-light-webfont.woff2") format("woff2"), url("../fonts/opensans-light-webfont.woff") format("woff"), url("../fonts/opensans-light-webfont.ttf") format("truetype"), url("../fonts/opensans-light-webfont.svg#open_sanslight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'open_sansregular';
+  src: url("../fonts/opensans-regular-webfont.eot");
+  src: url("../fonts/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-regular-webfont.woff2") format("woff2"), url("../fonts/opensans-regular-webfont.woff") format("woff"), url("../fonts/opensans-regular-webfont.ttf") format("truetype"), url("../fonts/opensans-regular-webfont.svg#open_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'open_sanssemibold';
+  src: url("../fonts/opensans-semibold-webfont.eot");
+  src: url("../fonts/opensans-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-semibold-webfont.woff2") format("woff2"), url("../fonts/opensans-semibold-webfont.woff") format("woff"), url("../fonts/opensans-semibold-webfont.ttf") format("truetype"), url("../fonts/opensans-semibold-webfont.svg#open_sanssemibold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 html, body {
   width: 100%;
   height: 100%;
@@ -422,6 +450,7 @@ ul {
 
 body {
   background-color: #f4f4f4;
+  font-family: "open_sansregular";
 }
 
 .wrapper {
@@ -457,6 +486,26 @@ body {
 
 .last {
   padding-left: 20px;
+}
+
+::-webkit-input-placeholder {
+  font-family: "open_sanslight";
+  font-size: 14px;
+}
+
+::-moz-placeholder {
+  font-family: "open_sanslight";
+  font-size: 14px;
+}
+
+:-moz-placeholder {
+  font-family: "open_sanslight";
+  font-size: 14px;
+}
+
+:-ms-input-placeholder {
+  font-family: "open_sanslight";
+  font-size: 14px;
 }
 
 .ui-helper-hidden {
@@ -1756,10 +1805,13 @@ body {
 .location__adress {
   margin-left: 0;
   background: url('../images/icons-sf42de740c2.png') 0 -1241px no-repeat;
+  font-size: 14px;
 }
 
 .location__telephone {
   background: url('../images/icons-sf42de740c2.png') 0 -1412px no-repeat;
+  font-size: 18px;
+  font-family: "open_sanssemibold";
 }
 
 .header-part-2 {
@@ -1837,6 +1889,7 @@ body {
 .help-menu__link {
   color: #333333;
   text-decoration: underline;
+  font-family: "open_sanssemibold";
 }
 .help-menu__link:hover {
   color: #ff6600;
@@ -1863,7 +1916,7 @@ body {
 .nav__item {
   display: inline-block;
   height: 100%;
-  margin: 0 0 0 -5px;
+  margin: 0 0 0 -4px;
 }
 
 .nav__link {
@@ -1909,6 +1962,7 @@ body {
 }
 
 .breadcrumbs__current {
+  font-family: "open_sansbold";
   margin-bottom: 35px;
   margin-top: 25px;
   font-size: 20px;
@@ -1921,6 +1975,7 @@ body {
 }
 
 .control {
+  font-size: 14px;
   width: 100%;
   height: 50px;
   background-color: #e4ebee;
@@ -2007,7 +2062,7 @@ body {
 
 .product__box-2 {
   max-width: 418px;
-  height: 203px;
+  height: 220px;
   vertical-align: top;
   border-right: 1px solid #dee1e4;
 }
@@ -2045,7 +2100,7 @@ body {
   position: relative;
   vertical-align: top;
   text-align: right;
-  height: 203px;
+  height: 220px;
   padding-right: 5px;
   float: right;
 }
@@ -2086,12 +2141,14 @@ body {
 }
 
 .product__article {
+  font-family: "open_sansbold";
   text-align: center;
   font-size: 12px;
   color: #7f7f7f;
 }
 
 .product__article_number {
+  font-family: "open_sanssemibold";
   font-size: 14px;
   color: #333333;
 }
@@ -2105,14 +2162,15 @@ body {
   color: #010101;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding: 10px 15px;
+  padding: 5px 15px;
+  font-family: "open_sanssemibold";
 }
 
 .product__info {
-  margin: 15px 0 20px 0;
+  margin: 10px 0 20px 0;
   font-size: 14px;
   color: #333333;
-  height: 65px;
+  height: 75px;
   padding-right: 20px;
   padding-left: 15px;
   overflow: hidden;
@@ -2142,7 +2200,8 @@ body {
 }
 
 .product__price {
-  padding: 5px 0;
+  font-family: "open_sanssemibold";
+  padding: 0;
   display: inline-block;
   font-size: 20px;
   color: black;
@@ -2154,6 +2213,7 @@ body {
   right: 0;
   display: inline-block;
   color: #7f7f7f;
+  font-family: "open_sansbold";
   font-size: 12px;
   padding: 10px 0 10px 15px;
 }
@@ -2175,6 +2235,8 @@ body {
 .product__add-to-cart {
   bottom: 0;
   right: 0;
+  font-size: 14px;
+  font-family: "open_sansbold";
   position: absolute;
   display: inline-block;
   border-radius: 5px;
@@ -2194,6 +2256,7 @@ body {
 }
 
 .product__rate-item {
+  vertical-align: top;
   display: inline-block;
   background: url('../images/icons-sf42de740c2.png') 0 -1358px no-repeat;
   width: 16px;
@@ -2215,13 +2278,15 @@ body {
   color: white;
   background-color: #b5beca;
   font-size: 12px;
-  text-align: center;
+  line-height: 15px;
   margin-top: 1px;
-  padding: 1px;
+  font-family: "open_sanssemibold";
+  text-align: center;
   vertical-align: top;
 }
 
 .page-number__list {
+  font-family: "open_sanssemibold";
   float: right;
 }
 
@@ -2259,6 +2324,7 @@ body {
 }
 
 .info-block__title {
+  font-family: "open_sansbold";
   text-indent: 0;
   display: block;
   clear: both;
@@ -2277,6 +2343,7 @@ body {
 }
 
 .expenses__list {
+  font-size: 14px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -2320,11 +2387,17 @@ body {
 }
 
 .categories__name {
+  font-family: "open_sanssemibold";
   display: inline-block;
   padding: 15px 30px;
 }
 
+.categories__content {
+  display: none;
+}
+
 .categories__content__list {
+  font-size: 14px;
   list-style: none;
   margin: 0;
   padding: 0 30px 15px 25px;
@@ -2336,7 +2409,22 @@ body {
 }
 
 .categories__item {
+  position: relative;
   border-bottom: 1px solid #dee1e4;
+}
+
+.categories__toggle {
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 25px;
+  height: 25px;
+  background: url('../images/icons-sf42de740c2.png') 3px 5px no-repeat;
+}
+
+.categories__toggle_open {
+  background: url('../images/icons-sf42de740c2.png') 3px -76px no-repeat;
 }
 
 .categories__item:last-child {
@@ -2395,7 +2483,10 @@ input[type="checkbox"]:not(:checked) + label:hover:before {
   height: 30px;
   border-radius: 5px;
   border: 1px solid #dddddd;
-  padding: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-family: "open_sanssemibold";
+  line-height: 16px;
 }
 
 .label__price-min,
@@ -2478,6 +2569,10 @@ input[type="checkbox"]:not(:checked) + label:hover:before {
   outline: 2px solid #ff6600;
 }
 
+.colors__item_active {
+  outline: 2px solid #ff6600;
+}
+
 .clear-filter {
   color: #5db2fc;
 }
@@ -2531,5 +2626,83 @@ input[type="checkbox"]:not(:checked) + label:hover:before {
 }
 
 /* ======= Blocks Views ========= */
+.product__title {
+  height: initial;
+  padding: 0;
+}
+
+.product__img-list {
+  display: none;
+}
+
+.product__full-size-img {
+  display: none;
+}
+
+.product__info {
+  display: none;
+}
+
+.product__rate-list {
+  display: none;
+}
+
+.product__box-2 {
+  height: 52px;
+  line-height: 52px;
+  width: 290px;
+  min-width: initial;
+  border-right: none;
+}
+
+.product__box-3 {
+  line-height: 0;
+  font-size: 1px;
+  height: 52px;
+  line-height: 52px;
+  float: none;
+  padding-right: 0;
+  text-align: justify;
+  width: 305px;
+}
+.product__box-3:after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+}
+
+.product__availability {
+  vertical-align: middle;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  padding: 0 0 0 15px;
+}
+
+.product__add-to-cart {
+  vertical-align: middle;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  font-size: 14px;
+  line-height: 0;
+}
+
+.product__item {
+  height: 52px;
+  padding: 0 10px;
+}
+
+.product__box-1 {
+  height: 52px;
+  line-height: 52px;
+}
+
+.product__price {
+  line-height: 52px;
+  padding: 0;
+  font-size: 18px;
+  vertical-align: middle;
+}
 
 /*# sourceMappingURL=main.css.map */

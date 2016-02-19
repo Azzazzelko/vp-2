@@ -70,7 +70,7 @@
 							<li class="expenses__item"><a href="#" class="expenses__link">Бюджетная линейка</a></li>
 						</ul>
 						<ul class="categories__list">
-							<li class="categories__item"><span class="categories__name">Наличие в магазинах</span>
+							<li class="categories__item"><a href="#" class="categories__toggle"></a><span class="categories__name">Наличие в магазинах</span>
 								<div class="categories__content">
 									<ul class="categories__content__list">
 										<li class="categories__content__item">
@@ -84,7 +84,7 @@
 									</ul>
 								</div>
 							</li>
-							<li class="categories__item"><span class="categories__name">Бренды</span>
+							<li class="categories__item"><a href="#" class="categories__toggle"></a><span class="categories__name">Бренды</span>
 								<div class="categories__content">
 									<ul class="categories__content__list">
 										<li class="categories__content__item">
@@ -96,7 +96,7 @@
 											<label for="brands-2" class="categories__label">Apple</label>
 										</li>
 										<li class="categories__content__item">
-											<input type="checkbox" name="brands" id="brands-3">
+											<input type="checkbox" name="brands" id="brands-3" checked>
 											<label for="brands-3" class="categories__label">Samsung</label>
 										</li>
 										<li class="categories__content__item">
@@ -111,18 +111,18 @@
 									</ul>
 								</div>
 							</li>
-							<li class="categories__item"><span class="categories__name">Цена</span>
+							<li class="categories__item"><a href="#" class="categories__toggle"></a><span class="categories__name">Цена</span>
 								<div class="categories__content">
 									<label class="label__price-min">от
-										<input type="text" id="price-min" class="price-min">
+										<input type="text" id="price-min" value="1" class="price-min">
 									</label>
 									<label class="label__price-max">до 
-										<input type="text" id="price-max" class="price-max">
+										<input type="text" id="price-max" value="9999999" class="price-max">
 									</label>
 									<div id="slider-range" class="slider-range slider-range"></div>
 								</div>
 							</li>
-							<li class="categories__item"><span class="categories__name">Цвет</span>
+							<li class="categories__item"><a href="#" class="categories__toggle"></a><span class="categories__name">Цвет</span>
 								<div class="categories__content">
 									<ul class="colors__list">
 										<li class="colors__item colors__item_white"></li>
@@ -140,11 +140,11 @@
 									</ul>
 								</div>
 							</li>
-							<li class="categories__item"><span class="categories__name">Операционные системы</span>
+							<li class="categories__item"><a href="#" class="categories__toggle"></a><span class="categories__name">Операционные системы</span>
 								<div class="categories__content">
 									<ul class="categories__content__list">
 										<li class="categories__content__item">
-											<input type="checkbox" name="OS" id="OS-1">
+											<input type="checkbox" name="OS" id="OS-1" checked>
 											<label for="OS-1" class="categories__label">Android</label>
 										</li>
 										<li class="categories__content__item">
@@ -462,8 +462,7 @@
 		<script src="../bower/jquery/jquery.js"></script>
 		<script src="../js/jquery-ui.js"></script>
 		<script src="../js/jquery.columnizer.js"></script>
-		<!--test dot-dot-dot for ... -->
-		<script src="//pastebin.com/raw.php?i=4hAcxkH4"></script>
+		<script src="../js/dotdotdot.js"></script>
 		<script src="../js/main.js"></script>
 	</body>
 </html>

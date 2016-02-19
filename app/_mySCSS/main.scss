@@ -8,6 +8,7 @@
 /* ===== instruments ====== */
 
 @import "_layout/_normalize.scss";
+@import "_layout/_fonts.scss";
 @import "_layout/_instruments.scss";
 @import "_layout/_slider.scss";
 
@@ -19,4 +20,4 @@
 /* ======= Blocks Views ========= */
   
 // @import "_layout/_view__inline-block.scss";
-// @import "_layout/_view__inline.scss";
+@import "_layout/_view__inline.scss";

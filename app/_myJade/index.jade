@@ -77,6 +77,7 @@ html(lang='ru-Ru')
 								a(href="#").expenses__link Бюджетная линейка
 						ul.categories__list
 							li.categories__item
+								a(href="#").categories__toggle
 								span.categories__name Наличие в магазинах
 								div.categories__content
 									ul.categories__content__list
@@ -88,6 +89,7 @@ html(lang='ru-Ru')
 											label(for="in-stores-2").categories__label В ближайшем ко мне магазине
 
 							li.categories__item
+								a(href="#").categories__toggle
 								span.categories__name Бренды
 								div.categories__content
 									ul.categories__content__list
@@ -98,7 +100,7 @@ html(lang='ru-Ru')
 											input(type="checkbox", name="brands", id="brands-2")
 											label(for="brands-2").categories__label Apple
 										li.categories__content__item
-											input(type="checkbox", name="brands", id="brands-3")
+											input(type="checkbox", name="brands", id="brands-3" checked)
 											label(for="brands-3").categories__label Samsung
 										li.categories__content__item
 											input(type="checkbox", name="brands", id="brands-4")
@@ -110,14 +112,16 @@ html(lang='ru-Ru')
 											a(href="#").clear-filter Сбросить фильтр
 
 							li.categories__item
+								a(href="#").categories__toggle
 								span.categories__name Цена
 								div.categories__content
 									label.label__price-min от
-										input(type="text", id="price-min" class="price-min")
+										input(type="text", id="price-min" class="price-min", value="1")
 									label.label__price-max до 
-										input(type="text", id="price-max" class="price-max")
+										input(type="text", id="price-max" class="price-max", value="9999999")
 									div(id="slider-range", class="slider-range").slider-range
 							li.categories__item
+								a(href="#").categories__toggle
 								span.categories__name Цвет
 								div.categories__content
 									ul.colors__list
@@ -134,11 +138,12 @@ html(lang='ru-Ru')
 										li.colors__item.colors__item_rose
 										li.colors__item.colors__item_brown
 							li.categories__item
+								a(href="#").categories__toggle
 								span.categories__name Операционные системы
 								div.categories__content
 									ul.categories__content__list
 										li.categories__content__item
-											input(type="checkbox", name="OS", id="OS-1")
+											input(type="checkbox", name="OS", id="OS-1" checked)
 											label(for="OS-1").categories__label Android
 										li.categories__content__item
 											input(type="checkbox", name="OS", id="OS-2")
@@ -434,10 +439,11 @@ html(lang='ru-Ru')
 		script(src="../bower/jquery/jquery.js")
 		script(src="../js/jquery-ui.js")
 		script(src="../js/jquery.columnizer.js")
-
-		//test dot-dot-dot for ... 
-		script(src="//pastebin.com/raw.php?i=4hAcxkH4")
-
+		
+		//- //test dot-dot-dot for ... 
+		//- script(src="//pastebin.com/raw.php?i=4hAcxkH4")
+		
+		script(src="../js/dotdotdot.js")
 		script(src="../js/main.js")
 		
 
