@@ -168,9 +168,9 @@ html(lang='ru-Ru')
 							ul.control__view-list
 								li.control__view-item 
 									span.control__view-item-text Вид каталога
-								li.control__view-item.control__view-item_inline-block
-								li.control__view-item.control__view-item_block
-								li.control__view-item.control__view-item_inline
+								li(data-view="_v-inline-block").control__view-item.control__view-item_inline-block
+								li(data-view="_v-block").control__view-item.control__view-item_block.control__view-item_block_active
+								li(data-view="_v-inline").control__view-item.control__view-item_inline
 						ul.product__list
 							li.product__item
 								.product__box-1
@@ -439,10 +439,6 @@ html(lang='ru-Ru')
 		script(src="../bower/jquery/jquery.js")
 		script(src="../js/jquery-ui.js")
 		script(src="../js/jquery.columnizer.js")
-		
-		//- //test dot-dot-dot for ... 
-		//- script(src="//pastebin.com/raw.php?i=4hAcxkH4")
-		
 		script(src="../js/dotdotdot.js")
 		script(src="../js/main.js")
 		

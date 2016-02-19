@@ -85,6 +85,10 @@
 	}
 }
  
+.control__view-item_inline-block_active {
+	@include get-sprite_x_y($map-hover, view-list-1-hover, 16, 16);
+}
+
 .control__view-item_block {
 	@include get-sprite_x_y($map, view-list-2, 16, 16);
 	cursor: pointer;
@@ -94,6 +98,10 @@
 	}
 }
 
+.control__view-item_block_active {
+	@include get-sprite_x_y($map-hover, view-list-2-hover, 16, 16);
+}
+
 .control__view-item_inline {
 	@include get-sprite_x_y($map, view-list-3, 16, 16);
 	cursor: pointer;
@@ -101,6 +109,10 @@
 	&:hover{
 		@include get-sprite_x_y($map-hover, view-list-3-hover, 16, 16);
 	}
+}
+
+.control__view-item_inline_active {
+	@include get-sprite_x_y($map-hover, view-list-3-hover, 16, 16);
 }
 
 .product__list {
@@ -235,7 +247,7 @@
 	margin: 10px 0 20px 0;
 	font-size: 14px;
 	color: #333333;
-	height: 75px;
+	height: 76px;
 	padding-right: 20px;
 	padding-left: 15px;
 	overflow: hidden;
