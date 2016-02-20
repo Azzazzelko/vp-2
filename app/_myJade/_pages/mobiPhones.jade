@@ -1,0 +1,248 @@
+extends ../main
+
+block title
+	| Мобильные телефоны
+
+block activeNavIndx
+	-var activeNavIndx = 1;
+
+block breadcrumbs
+	-var breadcrumbs = ["Главная", "Каталог", "Мобильные телефоны"]
+	+breadcrumbs(breadcrumbs)
+
+block content
+	.control.clearfix
+		.control__sort Сортировать по
+			select(name="sort").control__select
+				option(value="placeholder" disabled selected) по цене
+				option(value="убыванию") убыванию
+				option(value="возрастанию") возрастанию
+		ul.control__view-list
+			li.control__view-item 
+				span.control__view-item-text Вид каталога
+			li(data-view="_v-inline-block").control__view-item.control__view-item_inline-block
+			li(data-view="_v-block").control__view-item.control__view-item_block.control__view-item_block_active
+			li(data-view="_v-inline").control__view-item.control__view-item_inline
+	ul.product__list
+		li.product__item
+			.product__box-1
+				.product__full-size-img
+					img(src="../images/img-2.png", alt="").product__img-hight
+				ul.product__img-list
+					li.product__img-item.product__img-item_active
+						img(src="../images/img-2.png", alt="").product__img-small
+					li.product__img-item
+						img(src="../images/img-3.png", alt="").product__img-small
+					li.product__img-item
+						img(src="../images/img-4.png", alt="").product__img-small
+				.product__article Артикул 
+					span.product__article_number 189238
+
+			.product__box-2
+				h3.product__title Samsung GT-I9301I GALAXY S 3
+				.product__info.
+					Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота OVER9k процессора 1400 МГц EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц
+				ul.product__features-list
+					li.product__features-item
+						.product__features-cell Тип SIM-карты
+						.product__features-cell Micro-SIM
+					li.product__features-item
+						.product__features-cell Количество SIM-карт
+						.product__features-cell 1
+					li.product__features-item
+						.product__features-cell Цвет
+						.product__features-cell Белый
+					li.product__features-item
+						.product__features-cell ОС
+						.product__features-cell Android
+					li.product__features-item
+						.product__features-cell Связь 3G
+						.product__features-cell Есть
+					li.product__features-item
+						.product__features-cell 4G (LTE)
+						.product__features-cell Нет
+					li.product__features-item
+						.product__features-cell GPS-модуль
+						.product__features-cell Есть
+
+				ul.product__rate-list
+					li.product__rate-item
+					li.product__rate-item
+					li.product__rate-item
+					li.product__rate-item
+					li.product__rate-item
+					li.product__rate-item_star-col 2
+
+			.product__box-3
+				.product__price 10 990 Р
+				.product__availability В наличии
+				button.product__add-to-cart В корзину
+		li.product__item
+			.product__box-1
+				.product__full-size-img
+					img(src="../images/img-2.png", alt="").product__img-hight
+				ul.product__img-list
+					li.product__img-item.product__img-item_active
+						img(src="../images/img-2.png", alt="").product__img-small
+					li.product__img-item
+						img(src="../images/img-3.png", alt="").product__img-small
+					li.product__img-item
+						img(src="../images/img-4.png", alt="").product__img-small
+				.product__article Артикул 
+					span.product__article_number 189238
+
+			.product__box-2
+				h3.product__title Samsung GT-I9301I GALAXY S 3
+				.product__info.
+					Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота OVER9k процессора 1400 МГц EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц
+				ul.product__features-list
+					li.product__features-item
+						.product__features-cell Тип SIM-карты
+						.product__features-cell Micro-SIM
+					li.product__features-item
+						.product__features-cell Количество SIM-карт
+						.product__features-cell 1
+					li.product__features-item
+						.product__features-cell Цвет
+						.product__features-cell Белый
+					li.product__features-item
+						.product__features-cell ОС
+						.product__features-cell Android
+					li.product__features-item
+						.product__features-cell Связь 3G
+						.product__features-cell Есть
+					li.product__features-item
+						.product__features-cell 4G (LTE)
+						.product__features-cell Нет
+					li.product__features-item
+						.product__features-cell GPS-модуль
+						.product__features-cell Есть
+
+				ul.product__rate-list
+					li.product__rate-item
+					li.product__rate-item
+					li.product__rate-item
+					li.product__rate-item
+					li.product__rate-item
+					li.product__rate-item_star-col 4
+
+			.product__box-3
+				.product__price 10 990 Р
+				.product__availability В наличии
+				button.product__add-to-cart В корзину
+		li.product__item
+			.product__box-1
+				.product__full-size-img
+					img(src="../images/img-2.png", alt="").product__img-hight
+				ul.product__img-list
+					li.product__img-item.product__img-item_active
+						img(src="../images/img-2.png", alt="").product__img-small
+					li.product__img-item
+						img(src="../images/img-3.png", alt="").product__img-small
+					li.product__img-item
+						img(src="../images/img-4.png", alt="").product__img-small
+				.product__article Артикул 
+					span.product__article_number 189238
+
+			.product__box-2
+				h3.product__title Samsung GT-I9301I GALAXY S 3
+				.product__info.
+					Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота OVER9k процессора 1400 МГц EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц
+				ul.product__features-list
+					li.product__features-item
+						.product__features-cell Тип SIM-карты
+						.product__features-cell Micro-SIM
+					li.product__features-item
+						.product__features-cell Количество SIM-карт
+						.product__features-cell 1
+					li.product__features-item
+						.product__features-cell Цвет
+						.product__features-cell Белый
+					li.product__features-item
+						.product__features-cell ОС
+						.product__features-cell Android
+					li.product__features-item
+						.product__features-cell Связь 3G
+						.product__features-cell Есть
+					li.product__features-item
+						.product__features-cell 4G (LTE)
+						.product__features-cell Нет
+					li.product__features-item
+						.product__features-cell GPS-модуль
+						.product__features-cell Есть
+				ul.product__rate-list
+					li.product__rate-item
+					li.product__rate-item
+					li.product__rate-item
+					li.product__rate-item
+					li.product__rate-item
+					li.product__rate-item_star-col 1
+
+			.product__box-3
+				.product__price 10 990 Р
+				.product__availability В наличии
+				button.product__add-to-cart В корзину
+		li.product__item
+			.product__box-1
+				.product__full-size-img
+					img(src="../images/img-2.png", alt="").product__img-hight
+				ul.product__img-list
+					li.product__img-item.product__img-item_active
+						img(src="../images/img-2.png", alt="").product__img-small
+					li.product__img-item
+						img(src="../images/img-3.png", alt="").product__img-small
+					li.product__img-item
+						img(src="../images/img-4.png", alt="").product__img-small
+				.product__article Артикул 
+					span.product__article_number 189238
+
+			.product__box-2
+				h3.product__title Samsung GT-I9301I GALAXY S 3
+				.product__info.
+					Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота OVER9k процессора 1400 МГц EDGE, GPRS, WAP, Wi-Fi, Количество ядер процессора 4, Частота процессора 1400 МГц
+				ul.product__features-list
+					li.product__features-item
+						.product__features-cell Тип SIM-карты
+						.product__features-cell Micro-SIM
+					li.product__features-item
+						.product__features-cell Количество SIM-карт
+						.product__features-cell 1
+					li.product__features-item
+						.product__features-cell Цвет
+						.product__features-cell Белый
+					li.product__features-item
+						.product__features-cell ОС
+						.product__features-cell Android
+					li.product__features-item
+						.product__features-cell Связь 3G
+						.product__features-cell Есть
+					li.product__features-item
+						.product__features-cell 4G (LTE)
+						.product__features-cell Нет
+					li.product__features-item
+						.product__features-cell GPS-модуль
+						.product__features-cell Есть
+				ul.product__rate-list
+					li.product__rate-item
+					li.product__rate-item
+					li.product__rate-item
+					li.product__rate-item
+					li.product__rate-item
+					li.product__rate-item_star-col 3
+
+			.product__box-3
+				.product__price 10 990 Р
+				.product__availability В наличии
+				button.product__add-to-cart В корзину
+
+	ul.page-number__list
+		li.page-number__item 
+			a(href="#").page-number__link &#60;
+		li.page-number__item.page-number__item_active
+			a(href="#").page-number__link 1
+		li.page-number__item
+			a(href="#").page-number__link 2
+		li.page-number__item
+			a(href="#").page-number__link 3
+		li.page-number__item
+			a(href="#").page-number__link &#62;

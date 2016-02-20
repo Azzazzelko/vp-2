@@ -4,7 +4,7 @@ var gulp = require("gulp"),
 	compass = require('gulp-compass'),
 	browserSync = require("browser-sync");
 
-var jadePath = 'app/_myJade/**/*.jade';
+var jadePath = 'app/_myJade/_pages/*.jade';
 var SCSSPath = 'app/_mySCSS/**/*.scss';
 
 	gulp.task("server", function() {
@@ -20,7 +20,7 @@ var SCSSPath = 'app/_mySCSS/**/*.scss';
 		gulp.watch([
 			"app/*.html",
 			"app/js/**/*.js",
-			"app/_myJade/*.jade",
+			jadePath,
 			"app/css/**/*.css"
 		]).on("change", browserSync.reload);
 	});

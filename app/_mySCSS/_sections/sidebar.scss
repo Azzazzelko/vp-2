@@ -240,12 +240,20 @@ input[type="checkbox"]:not(:checked) + label:hover:before {
 	color: #5db2fc;
 }
 
-$colors-items: white white, silver #cccccc, black black, darkblue #0a3153, red #ff1800, yellow #fff343, orange #fb914a, green #92c37c, blue #40a6ff, purpul #9870ad, rose #dc78ad,  brown #7f401d;
+// $colors-items: white white, silver #cccccc, black black, darkblue #0a3153, red #ff1800, yellow #fff343, orange #fb914a, green #92c37c, blue #40a6ff, purpul #9870ad, rose #dc78ad,  brown #7f401d;
 
-@each $item in $colors-items {
-	$key: nth($item, 1);
- 	$value: nth($item, 2);
+// @each $item in $colors-items {
+// 	$key: nth($item, 1);
+//  	$value: nth($item, 2);
 
+// 	.colors__item_#{$key} {
+// 		background-color: $value;
+// 	}
+// }
+
+$colors-items: ( "white": white, "silver": #cccccc, "black": black, "darkblue": #0a3153, "red": #ff1800, "yellow": #fff343, "orange": #fb914a, "green": #92c37c, "blue": #40a6ff, "purpul": #9870ad, "rose": #dc78ad,  "brown": #7f401d);
+
+@each $key,$value in $colors-items {
 	.colors__item_#{$key} {
 		background-color: $value;
 	}

@@ -25,6 +25,8 @@ var lotusMod = (function(){
     $(".categories__toggle").on("click", filterContentToggle);
 
     viewButtons.on("click", changeView);
+
+    $(".product__img-item").on("click", slideShowClick);
   };
 
   function column(){ //== Разделение текста в диве на две колонки
@@ -171,6 +173,19 @@ var lotusMod = (function(){
     });
   }
 
+  function slideShowClick(){  //== Показываем маленькую картинку в большом поле по клику
+    var oldSmallImg = $(this).find('img').attr("src");
+
+    $(this).siblings($(this)).removeClass('product__img-item_active');
+
+    $(this)
+      .addClass('product__img-item_active')
+      .parent()
+      .siblings('.product__full-size-img')
+      .find("img")
+      .attr("src", oldSmallImg);
+  }
+
   return {
     run:main
   }
@@ -180,25 +195,3 @@ var lotusMod = (function(){
 $(document).ready(function(){
   lotusMod.run();
 });
-
-
-
-var allSmallImg = $(".product__img-item");
-// var bigImg = $(".product__full-size-img");
-
-allSmallImg.on("click", slideShowClick);
-
-
-function slideShowClick(){
-  var oldSmallImg = $(this).find('img').attr("src");
-
-  $(this).siblings($(this)).removeClass('product__img-item_active');
-
-  $(this)
-    .addClass('product__img-item_active')
-    .parent()
-    .siblings('.product__full-size-img')
-    .find("img")
-    .attr("src", oldSmallImg);
-
-}

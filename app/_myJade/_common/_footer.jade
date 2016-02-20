@@ -1,0 +1,20 @@
+footer.footer
+	.container.clearfix
+		ul.footer-social-list
+			- var socials = ["fb", "vk", "tw"]
+			each item in socials
+				li.foot-social__item
+					a(href="#" class="foot-social__link foot-social__link_#{item}")
+						span.text-hide #{item}
+
+		a(href="#").logo-footer
+			img(src="../images/logo-footer.png", alt="logo").logo__img
+			span.text-hide COOLTECH
+		nav.foot-nav
+			ul.foot-nav__list
+				- var navList = ["Планшеты", "Мобильные телефоны", "Мp3 плееры", "Персональные компьютеры", "Ноутбуки", "Аксессуары", "Бытовая техника"]
+				each item in navList
+					li.foot-nav__item
+						a(href="#").foot-nav__link #{item}
+						
+	span.copy All rights reserved. 2016. no copy allowed

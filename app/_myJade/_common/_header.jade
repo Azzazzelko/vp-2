@@ -1,0 +1,35 @@
+header.header
+	.header-part-1
+		.container.clearfix
+			ul.header-social-list
+				- var socials = ["fb", "vk", "tw"]
+				each item in socials
+					li.head-social__item
+						a(href="#" class="head-social__link head-social__link_#{item}")
+							span.text-hide #{item}
+
+			ul.location
+				li.location__adress ул. Маяковская 6, офис 17
+				li.location__telephone +7 (921) 123-12-13
+
+	.header-part-2
+		.container.clearfix
+			a(href="#").logo
+				img(src="../images/logo.png", alt="logo").logo__img
+				h1.text-hide COOLTECH
+			.search-block
+				input(type="search", placeholder="Что будем искать?").search-block__input
+				button(type="submit").search-block__button Найти
+			.help-menu
+				ul.help-menu__list
+					-var helpList = ["Карта проезда", "История заказов ", "Корзина "]
+					each item in helpList
+						li.help-menu__item
+							a(href="#").help-menu__link #{item}
+	
+	.header-part-3
+		.container
+			block activeNavIndx
+			- var navList = ['Планшеты', "Мобильные телефоны", "Мp3 плееры", "Персональные компьютеры", "Ноутбуки", "Аксессуары", "Бытовая техника"]
+			
+			+nav('nav', navList, activeNavIndx)

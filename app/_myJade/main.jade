@@ -1,0 +1,47 @@
+include _common/_mixins
+
+doctype html
+html(lang='ru-Ru')
+	head
+		meta(charset='UTF-8')
+		meta(http-equiv='X-UA-Compatible', content="IE=edge")
+		meta(name='viewport' content='width=device-width')
+		title 
+			block title
+		link(rel="stylesheet", href="../css/main.css")
+			
+		include _common/_favicons
+		
+	body
+		.wrapper
+
+			include _common/_header
+
+			main.content
+				.container.clearfix
+
+					.breadcrumbs
+						block breadcrumbs
+
+					include _common/_sidebar
+
+					.content-area
+						block content
+
+					include _common/_info
+
+		include _common/_footer
+
+		script(src="../bower/jquery/jquery.js")
+		script(src="../js/jquery-ui.js")
+		script(src="../js/jquery.columnizer.js")
+		script(src="../js/dotdotdot.js")
+		script(src="../js/select2.js")
+		script(src="../js/main.js")
+		
+
+
+
+
+
+

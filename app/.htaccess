@@ -1,0 +1,7 @@
+AddDefaultCharset UTF-8
+
+IndexIgnore *.png *.php
+
+php_value display_errors 1
+
+DirectoryIndex index.html
