@@ -2,6 +2,7 @@ var gulp = require("gulp"),
 	jade = require("gulp-jade"),
 	plumber = require("gulp-plumber"),
 	compass = require('gulp-compass'),
+	autoprefixer = require('gulp-autoprefixer'),
 	browserSync = require("browser-sync");
 
 var jadePath = 'app/_myJade/_pages/*.jade';
@@ -49,12 +50,23 @@ var SCSSPath = 'app/_mySCSS/**/*.scss';
 				sass: 'app/_mySCSS/'
 			}))
 	});
+
+//============= AutoPrefixer ==============//
+gulp.task('autoprefix', function () {
+	    gulp.src('app/css/main.css')
+		.pipe(autoprefixer({
+			browsers: ['last 5 versions'],
+			cascade: false
+		}))
+		.pipe(gulp.dest('app/css/'))
+});
+
 //============== При изменении файлов JADE запускаем таск JADE =====
 	gulp.task("watch2", function(){
 		gulp.watch(jadePath, ['jade']);
 		gulp.watch('app/_mySCSS/**/*.scss', ['compass'])
 	});
 
-	gulp.task("default", ["server", "jade", "compass", "watch2", "watch"]);
+	gulp.task("default", ["server", "jade", "compass", "autoprefix", "watch2", "watch"]);
 
 	
