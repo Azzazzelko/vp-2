@@ -163,8 +163,10 @@ html(lang='ru-Ru')
 					.content-area
 						.control.clearfix
 							.control__sort Сортировать по
-								select.control__select
-									option Цене
+								select(name="sort", placeholder="цене").control__select
+									option(value="placeholder" disabled selected) по цене
+									option(value="убыванию") убыванию
+									option(value="возрастанию") возрастанию
 							ul.control__view-list
 								li.control__view-item 
 									span.control__view-item-text Вид каталога
@@ -219,7 +221,7 @@ html(lang='ru-Ru')
 										li.product__rate-item
 										li.product__rate-item
 										li.product__rate-item
-										li.product__rate-item_star-col 4
+										li.product__rate-item_star-col 2
 
 								.product__box-3
 									.product__price 10 990 Р
@@ -324,7 +326,7 @@ html(lang='ru-Ru')
 										li.product__rate-item
 										li.product__rate-item
 										li.product__rate-item
-										li.product__rate-item_star-col 4
+										li.product__rate-item_star-col 1
 
 								.product__box-3
 									.product__price 10 990 Р
@@ -376,7 +378,7 @@ html(lang='ru-Ru')
 										li.product__rate-item
 										li.product__rate-item
 										li.product__rate-item
-										li.product__rate-item_star-col 4
+										li.product__rate-item_star-col 3
 
 								.product__box-3
 									.product__price 10 990 Р
@@ -440,6 +442,7 @@ html(lang='ru-Ru')
 		script(src="../js/jquery-ui.js")
 		script(src="../js/jquery.columnizer.js")
 		script(src="../js/dotdotdot.js")
+		script(src="../js/select2.js")
 		script(src="../js/main.js")
 		
 

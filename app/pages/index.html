@@ -172,8 +172,10 @@
 					<div class="content-area">
 						<div class="control clearfix">
 							<div class="control__sort">Сортировать по
-								<select class="control__select">
-									<option>Цене</option>
+								<select name="sort" placeholder="цене" class="control__select">
+									<option value="placeholder" disabled selected>по цене</option>
+									<option value="убыванию">убыванию</option>
+									<option value="возрастанию">возрастанию</option>
 								</select>
 							</div>
 							<ul class="control__view-list">
@@ -233,7 +235,7 @@
 										<li class="product__rate-item"></li>
 										<li class="product__rate-item"></li>
 										<li class="product__rate-item"></li>
-										<li class="product__rate-item_star-col">4</li>
+										<li class="product__rate-item_star-col">2</li>
 									</ul>
 								</div>
 								<div class="product__box-3">
@@ -349,7 +351,7 @@
 										<li class="product__rate-item"></li>
 										<li class="product__rate-item"></li>
 										<li class="product__rate-item"></li>
-										<li class="product__rate-item_star-col">4</li>
+										<li class="product__rate-item_star-col">1</li>
 									</ul>
 								</div>
 								<div class="product__box-3">
@@ -407,7 +409,7 @@
 										<li class="product__rate-item"></li>
 										<li class="product__rate-item"></li>
 										<li class="product__rate-item"></li>
-										<li class="product__rate-item_star-col">4</li>
+										<li class="product__rate-item_star-col">3</li>
 									</ul>
 								</div>
 								<div class="product__box-3">
@@ -463,6 +465,7 @@
 		<script src="../js/jquery-ui.js"></script>
 		<script src="../js/jquery.columnizer.js"></script>
 		<script src="../js/dotdotdot.js"></script>
+		<script src="../js/select2.js"></script>
 		<script src="../js/main.js"></script>
 	</body>
 </html>

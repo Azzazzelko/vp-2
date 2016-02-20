@@ -1,4 +1,4 @@
- var lotusMod = (function(){
+var lotusMod = (function(){
   var min_max = $("#price-min, #price-max"),
       boxes = $(".colors__item"),
       viewButtons = $(".control__view-item_inline-block, .control__view-item_inline, .control__view-item_block"),
@@ -9,6 +9,8 @@
     dotdotdot();
     column();
     slider();
+    newSelect();
+    buildRating();
   };
 
   var setUpListeners = function(){
@@ -68,22 +70,22 @@
   };
 
   function slider(){ //== Слайдер в общем-то
-      var _min = parseInt( $("#price-min").val() ),
-          _max = parseInt( $("#price-max").val() );
+      var _min = parseInt( $(".price-min").val() ),
+          _max = parseInt( $(".price-max").val() );
 
       if ( _max < _min ) {
         _max = _min;
-        $("#price-max").val(_min);
+        $(".price-max").val(_min);
       }
 
-      $( "#slider-range" ).slider({
+      $( ".slider-range" ).slider({
         range: true,
         min: _min,
         max: _max,
         values: [ _min, _max ],
         slide: function( event, ui ) {
-          $( "#price-min" ).val(ui.values[ 0 ]);
-          $( "#price-max" ).val(ui.values[ 1 ]);
+          $( ".price-min" ).val(ui.values[ 0 ]);
+          $( ".price-max" ).val(ui.values[ 1 ]);
         }
       });
   };
@@ -112,7 +114,7 @@
       .slideToggle();
   };
 
-  function changeView(){
+  function changeView(){  //== Смена вида отображения товаров
     viewButtons
       .removeClass('control__view-item_inline-block_active')
       .removeClass('control__view-item_inline_active')
@@ -150,6 +152,25 @@
     temp = data;
   };
   
+  function newSelect(){ //== Плагин-Селект2
+    $(".control__select").select2();
+  };
+
+  function buildRating(){ //== Создаем звездочки, исходя из циферки в разметке. *нет проверок на дурака*
+    var starsLists = $(".product__rate-list");
+
+    starsLists.each(function(index, el){
+      var stars = $(this).find('.product__rate-item'),
+          starsCol = $(this).find('.product__rate-item_star-col').text();
+
+      stars.each(function(index, el){
+        if (index < starsCol){
+          $(this).addClass('product__rate-item_active');
+        };
+      });
+    });
+  }
+
   return {
     run:main
   }
@@ -162,52 +183,22 @@ $(document).ready(function(){
 
 
 
+var allSmallImg = $(".product__img-item");
+// var bigImg = $(".product__full-size-img");
+
+allSmallImg.on("click", slideShowClick);
 
 
+function slideShowClick(){
+  var oldSmallImg = $(this).find('img').attr("src");
 
+  $(this).siblings($(this)).removeClass('product__img-item_active');
 
-// var viewButtons = $(".control__view-item_inline-block, .control__view-item_inline, .control__view-item_block");
-// var temp;
+  $(this)
+    .addClass('product__img-item_active')
+    .parent()
+    .siblings('.product__full-size-img')
+    .find("img")
+    .attr("src", oldSmallImg);
 
-
-// viewButtons.on("click", function(){
-//   viewButtons
-//     .removeClass('control__view-item_inline-block_active')
-//     .removeClass('control__view-item_inline_active')
-//     .removeClass('control__view-item_block_active');
-
-//   if ( $(this).hasClass('control__view-item_inline-block') ){
-//     $(this).addClass('control__view-item_inline-block_active');
-//   } else if ( $(this).hasClass('control__view-item_inline') ){
-//     $(this).addClass('control__view-item_inline_active');
-//   } else if ( $(this).hasClass('control__view-item_block') ){
-//     $(this).addClass('control__view-item_block_active');
-//   }
-  
-  
-//   var data = $(this).attr("data-view"),
-//       over9k = $(".product__list").find("*").add(".product__list");
-
-//   over9k.each(function(){
-//     var classList = $(this).attr("class").split(/\s+/),
-//         forClear = $(this);
-
-//     $(classList).each(function(index, el){
-//       if ( el.indexOf(temp) > 0 ){
-//           forClear.removeClass(el);
-//       };
-
-//     });
-
-//     var newClassName = $(this).attr("class") + data;
-
-//     if ( $(this).attr("class").indexOf(data) == -1 ){
-//       $(this).addClass(newClassName);
-//     }
-//   });
-  
-//   temp = data;
-// });
-
-
-
+}

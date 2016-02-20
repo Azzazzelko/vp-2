@@ -45,6 +45,7 @@
 }
 
 .control__sort {
+	cursor: default;
 	float: left;
 	line-height: 50px;
     vertical-align: middle;
@@ -74,6 +75,7 @@
 
 .control__view-item-text {
 	line-height: 50px;
+	cursor: default;
 }
 
 .control__view-item_inline-block {
@@ -332,17 +334,17 @@
 
 .product__rate-list {
 	padding-left: 15px;
+	cursor: default;
 }
 
 .product__rate-item {
 	vertical-align: top;
 	display: inline-block;
 	@include get-sprite($map, star);
-	cursor: pointer;
+}
 
-	&:hover {
-		@include get-sprite($map-hover, star-hover);
-	}
+.product__rate-item_active {
+	@include get-sprite($map-hover, star-hover);
 }
 
 .product__rate-item_star-col {

@@ -39,7 +39,7 @@ $socials: fb, vk, tw;
 
 // @each $icon in $socials {
 // 	.socials__link_#{$icon} {
-// 		@include get-sprite($map, $icon);
+// 		@include get-sprite_x_y($map, $icon);
 // 	}
 // }
 //--------- TESTS --------- */ 
