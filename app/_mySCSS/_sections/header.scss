@@ -77,14 +77,27 @@
 
 .location__adress {
 	margin-left: 0;
-	@include get-sprite_x_y($map, map-pin, 0, 31);
 	font-size: 14px;
+	padding-left: 0;
+	line-height: initial;
+}
+
+.location__adress_link {
+	@include get-sprite_x_y($map, map-pin, 0, 1);
+	padding-left: 20px;
+	display: block;
 }
 
 .location__telephone {
 	@include get-sprite_x_y($map, telephone, 0, 31);
 	font-size: 18px;
 	font-family: $semibold;
+}
+
+.location__adress_link,
+.location__telephone_link {
+	text-decoration: none;
+	color: #333;
 }
 
 .header-part-2 {

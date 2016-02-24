@@ -5,12 +5,14 @@ header.header
 				- var socials = ["fb", "vk", "tw"]
 				each item in socials
 					li.head-social__item
-						a(href="#" class="head-social__link head-social__link_#{item}")
+						a(href="#" class="head-social__link head-social__link_#{item}" target="_blank")
 							span.text-hide #{item}
 
 			ul.location
-				li.location__adress ул. Маяковская 6, офис 17
-				li.location__telephone +7 (921) 123-12-13
+				li.location__adress 
+					a(href="https://goo.gl/maps/UAohA7JfHBy", target="_blank").location__adress_link ул. Маяковская 6, офис 17
+				li.location__telephone
+					a(href="tel://+7(921)123-12-13").location__telephone_link +7 (921) 123-12-13
 
 	.header-part-2
 		.container.clearfix

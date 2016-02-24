@@ -9,35 +9,42 @@ aside.sidebar
 			a(href="#").categories__toggle
 			span.categories__name Наличие в магазинах
 			div.categories__content
-				ul.categories__content__list
-						li.categories__content__item
-							input(type="radio", name="in-stores", id="in-stores-1" checked)
-							label(for="in-stores-1").categories__label Во всех магазинах
-						li.categories__content__item
-							input(type="radio", name="in-stores", id="in-stores-2")
-							label(for="in-stores-2").categories__label В ближайшем ко мне магазине
+				ul.categories__content-list
+						li.categories__content-item
+							label.categories__label
+								input(type="radio", name="in-stores", checked).categories__input-radio
+								.categories__label-text.categories__label-text-radio Во всех магазинах
+						li.categories__content-item
+							label.categories__label.categories__label-radio
+								input(type="radio", name="in-stores").categories__input-radio
+								.categories__label-text.categories__label-text-radio В ближайшем ко мне магазине
 
 		li.categories__item
 			a(href="#").categories__toggle
 			span.categories__name Бренды
 			div.categories__content
-				ul.categories__content__list
-					li.categories__content__item
-						input(type="checkbox", name="brands", id="brands-1")
-						label(for="brands-1").categories__label Lenovo
-					li.categories__content__item
-						input(type="checkbox", name="brands", id="brands-2")
-						label(for="brands-2").categories__label Apple
-					li.categories__content__item
-						input(type="checkbox", name="brands", id="brands-3" checked)
-						label(for="brands-3").categories__label Samsung
-					li.categories__content__item
-						input(type="checkbox", name="brands", id="brands-4")
-						label(for="brands-4").categories__label Asus
-					li.categories__content__item
-						input(type="checkbox", name="brands", id="brands-5")
-						label(for="brands-5").categories__label Motorola
-					li.categories__content__item
+				ul.categories__content-list
+					li.categories__content-item
+						label.categories__label.categories__label-checkbox
+							input(type="checkbox", name="brands").categories__input-checkbox
+							.categories__label-text.categories__label-text-checkbox Lenovo
+					li.categories__content-item
+						label.categories__label.categories__label-checkbox
+							input(type="checkbox", name="brands").categories__input-checkbox
+							.categories__label-text.categories__label-text-checkbox Apple
+					li.categories__content-item
+						label.categories__label.categories__label-checkbox
+							input(type="checkbox", name="brands" checked).categories__input-checkbox
+							.categories__label-text.categories__label-text-checkbox Samsung
+					li.categories__content-item
+						label.categories__label.categories__label-checkbox
+							input(type="checkbox", name="brands").categories__input-checkbox
+							.categories__label-text.categories__label-text-checkbox Asus
+					li.categories__content-item
+						label.categories__label.categories__label-checkbox
+							input(type="checkbox", name="brands").categories__input-checkbox
+							.categories__label-text.categories__label-text-checkbox Motorola
+					li.categories__content-item
 						a(href="#").clear-filter Сбросить фильтр
 
 		li.categories__item
@@ -45,9 +52,9 @@ aside.sidebar
 			span.categories__name Цена
 			div.categories__content
 				label.label__price-min от
-					input(type="text", id="price-min" class="price-min", value="1")
+					input(type="text", id="price-min" class="price-min", value="1000", data-min="1")
 				label.label__price-max до 
-					input(type="text", id="price-max" class="price-max", value="9999999")
+					input(type="text", id="price-max" class="price-max", value="5000", data-max="10000")
 				div(id="slider-range", class="slider-range").slider-range
 		li.categories__item
 			a(href="#").categories__toggle
@@ -61,21 +68,26 @@ aside.sidebar
 			a(href="#").categories__toggle
 			span.categories__name Операционные системы
 			div.categories__content
-				ul.categories__content__list
-					li.categories__content__item
-						input(type="checkbox", name="OS", id="OS-1" checked)
-						label(for="OS-1").categories__label Android
-					li.categories__content__item
-						input(type="checkbox", name="OS", id="OS-2")
-						label(for="OS-2").categories__label iOS
-					li.categories__content__item
-						input(type="checkbox", name="OS", id="OS-3")
-						label(for="OS-3").categories__label Windows Mobile
-					li.categories__content__item
-						input(type="checkbox", name="OS", id="OS-4")
-						label(for="OS-4").categories__label Symbian
-					li.categories__content__item
-						input(type="checkbox", name="OS", id="OS-5")
-						label(for="OS-5").categories__label Custom
-					li.categories__content__item
+				ul.categories__content-list
+					li.categories__content-item
+						label.categories__label.categories__label-checkbox
+							input(type="checkbox", name="OS" checked).categories__input-checkbox
+							.categories__label-text.categories__label-text-checkbox Android
+					li.categories__content-item
+						label.categories__label.categories__label-checkbox
+							input(type="checkbox", name="OS").categories__input-checkbox
+							.categories__label-text.categories__label-text-checkbox iOS
+					li.categories__content-item
+						label.categories__label.categories__label-checkbox
+							input(type="checkbox", name="OS").categories__input-checkbox
+							.categories__label-text.categories__label-text-checkbox Windows Mobile
+					li.categories__content-item
+						label.categories__label.categories__label-checkbox
+							input(type="checkbox", name="OS").categories__input-checkbox
+							.categories__label-text.categories__label-text-checkbox Symbian
+					li.categories__content-item
+						label.categories__label.categories__label-checkbox
+							input(type="checkbox", name="OS").categories__input-checkbox
+							.categories__label-text.categories__label-text-checkbox Custom
+					li.categories__content-item
 						a(href="#").clear-filter Сбросить фильтр

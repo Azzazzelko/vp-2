@@ -58,14 +58,14 @@
 	display: none;
 }
 
-.categories__content__list {
+.categories__content-list {
 	font-size: 14px;
 	list-style: none;
 	margin: 0;
 	padding: 0 30px 15px 25px;
 }
 
-.categories__content__item {
+.categories__content-item {
 	padding: 10px 5px;
 	display: block;
 }
@@ -93,12 +93,12 @@
 	border: none;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
+.categories__input-radio,
+.categories__input-checkbox {
 	display: none;
 }
 
-input[type="radio"] + label:before {
+.categories__input-radio ~ .categories__label-text-radio:before {
 	content: "";
     display: inline-block;
     width: 7px;
@@ -109,12 +109,12 @@ input[type="radio"] + label:before {
     border-radius: 50%;
 }
 
-input[type="radio"]:checked + label:before {
+.categories__input-radio:checked ~ .categories__label-text-radio:before {
 	 background: #ff6600;
 	 box-shadow: 0 0 0 3px #ff6600;
 }
 
-input[type="checkbox"] + label:before {
+.categories__input-checkbox ~ .categories__label-text-checkbox:before {
 	content: "";
     display: inline-block;
     width: 19px;
@@ -125,12 +125,12 @@ input[type="checkbox"] + label:before {
 	vertical-align: middle;
 }
 
-input[type="checkbox"]:checked + label:before {
+.categories__input-checkbox:checked + .categories__label-text-checkbox:before {
 	@include get-sprite_x_y($map, white-mark, 3, 5);
 	background-color: #ff6e35;
 }
 
-input[type="checkbox"]:not(:checked) + label:hover:before {
+.categories__input-checkbox:not(:checked) + .categories__label-text-checkbox:hover:before {
 	@include get-sprite_x_y($map, black-mark, 3, 5);
 	background-color: #dee1e4;
 }

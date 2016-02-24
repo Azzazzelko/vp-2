@@ -1,5 +1,9 @@
 //===== Переделанный селект =========//
 
+.select2-search--dropdown {
+  display: none !important;
+}
+
 .control__select {
   display: none;
 }
