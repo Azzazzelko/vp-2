@@ -1,6 +1,6 @@
 var lotusMod = (function(){
   var viewButtons = $(".control__view-item_inline-block, .control__view-item_inline, .control__view-item_block"),
-      tempData;
+      tempData;  //нужная глобальная переменная для смены видов
 
   var main = function(){
     setUpListeners();

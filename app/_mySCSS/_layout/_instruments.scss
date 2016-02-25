@@ -31,21 +31,24 @@ body {
 }
 
 .wrapper {
+	display: table;
+	width: 100%;
 	min-height: 100%;
 	position: relative;
 }
 
-.wrapper:after {
-	content: "";
-	display: block;
-	height: 220px;
-	width: 100%;
+.content{
+	display: table-row;
 }
 
 .container {
 	width: 1100px;
 	margin: 0 auto;
 }
+
+.footer .container {
+	padding-top: 35px;
+} 
 
 .clearfix:before,
 .clearfix:after {

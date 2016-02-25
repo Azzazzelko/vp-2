@@ -1,9 +1,9 @@
 .footer {
 	background: url(../images/bg-footer.png);
-	height: 220px;
-	margin-top: -220px; 
+	min-height: 220px;
 	position: relative;
 	padding-top: 35px;
+	display: table-row;
 }
 
 .footer-social-list {
