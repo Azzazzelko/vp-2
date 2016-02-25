@@ -2307,7 +2307,7 @@ body {
 /* ======= sections ====== */
 .footer {
   background: url(../images/bg-footer.png);
-  min-height: 220px;
+  height: 220px;
   position: relative;
   padding-top: 35px;
   display: table-row;
